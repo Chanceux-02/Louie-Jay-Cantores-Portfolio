@@ -1,0 +1,73 @@
+<template>
+
+<div class="education-container">
+
+  <p class="title">Education</p>
+
+  <div class="education-level">
+      <section>
+        <p class="educ-title">College</p>
+        <p class="school">ILOILO SCIENCE AND TECHNOLOGY UNIVERSITY</p>
+        <p>Bachelor of Science in Information Systems</p>
+      </section>
+      <section class="date">
+        <p>2019 - 2023</p>
+      </section>
+  </div>
+
+  <div class="education-level">
+      <section>
+        <p class="educ-title">Senior High School</p>
+        <p class="school">STI COLLEGE ILOILO</p>
+        <p>Information and Communications Technology (ICT)</p>
+      </section>
+      <section class="date">
+        <p>2017 - 2019</p>
+      </section>
+  </div>
+
+  <section></section>
+
+</div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+
+.education-container{
+    padding: 8% 8% 2% 8%;
+    height: 90vh;
+    max-height: 750px;
+    background-color: #191919;
+    background-size: cover;
+    background-position: center;
+}
+.education-level{
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+  border-bottom: 1px solid black;
+}
+.educ-title{
+  font-size: 2rem;
+  font-weight: 900;
+}
+.school{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.educ-title{
+  color: #F9004D;
+}
+
+
+</style>
