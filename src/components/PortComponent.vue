@@ -30,7 +30,7 @@
 <script>
 
 import CardComponent from './child/CardComponent.vue';
-import Cards from '../cardsData';
+import Cards from '../datas/cardsData';
 
 
 export default {

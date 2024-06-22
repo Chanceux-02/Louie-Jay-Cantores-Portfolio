@@ -49,7 +49,7 @@
 <script>
 
 import CardComponent from './child/CardComponent.vue';
-import {skills, techStack} from '../cardsSkillsData';
+import {skills, techStack} from '../datas/cardsSkillsData';
 
 
 export default {
