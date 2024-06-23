@@ -129,4 +129,28 @@ a:hover{
   z-index: 1000;
 }
 
+@media (max-width: 425px) {
+  .contact{
+    width: 100%;
+    font-size: 0.8rem;
+    margin: 1% auto 3% auto;
+  }
+  .container{
+    height: 50vh;
+  }
+  .fa-4x {
+    font-size:2rem;
+  }
+  .links{
+    justify-content: space-between;
+    width: 20%;
+    margin: auto;
+  }
+  .copy-message{
+    font-size: 0.8rem;
+    top: 22%;
+  }
+}
+
+
 </style>

@@ -6,10 +6,14 @@
 
       <h1>Full Stack Web Developer</h1>
       
-
       <p class="text">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span>Welcome to my world.</span></p>
 
     </div>
+
+    <ul class="nav-link">
+      <li> <a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank"><i class="fa-brands fa-linkedin fa-3x mx-2" aria-hidden="true"></i></a></li>
+      <li> <a href="https://github.com/Chanceux-02" target="_blank"><i class="fa-brands fa-square-github fa-3x mx-2" aria-hidden="true"></i></a></li>
+    </ul>
 
   </div>
 </template>
@@ -33,10 +37,9 @@ export default {
   }
   .header-container{
     padding: 9% 0 0 0;
-    height: 88vh;
+    min-height: 88vh;
     max-height: 900px;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpVc6b5oNxqkkh3vJQ761Wt26gFO5nxTXmVw&s);
-    /* background-position: 50%; */
     background-repeat: no-repeat;
     background-size: cover;  
   }
@@ -61,6 +64,54 @@ export default {
 
   .text {
       line-height: 1.5; /* Adjust the value as needed */
+  }
+   .nav-link{
+      visibility: hidden;
+    }
+
+  @media (max-width: 1000px) {
+    .intro{
+      width: 70%;
+    }
+    .intro p{
+        font-size: 2.5rem;
+    }
+    h1{
+        font-size: 1.5rem !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-container{
+        min-height: 0vh;
+        height: 60vh;
+    }
+
+  }
+  @media (max-width: 425px) {
+    .intro{
+      width: 90%;
+      margin-top: 20%;
+
+    }
+    .intro p{
+        font-size: 1.5rem;
+    }
+    h1{
+        font-size: 1rem !important;
+    }
+
+    .nav-link{
+      display: flex;
+      justify-content: space-between;
+      width: 30%;
+      visibility: visible;
+    }
+    .nav-link li{
+      width: 100%;
+      list-style: none;
+    }
+
   }
 
 

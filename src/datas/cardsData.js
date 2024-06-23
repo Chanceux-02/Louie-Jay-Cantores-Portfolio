@@ -71,6 +71,14 @@ const cards = [
         desc: 'Here, you\'ll discover a showcase of my skills, experiences, and projects. From web development and design to problem-solving and creative thinking, explore my work that reflects my passion and dedication. Join me on this journey and witness the impact I can create through innovative and meaningful solutions.',
         tech: ['HTML', 'CSS', 'Bootstrap', 'JS library (AOS)'],
         link: 'https://github.com/Chanceux-02/Louie-Jay-Cantores-Portfolio'
+    },
+    {
+        id: 10,
+        image: require('@/assets/projectImage/portfolio.png'),
+        title: 'Second Online Portfolio',
+        desc: 'Here, you\'ll discover a showcase of my skills, experiences, and projects. From web development and design to problem-solving and creative thinking, explore my work that reflects my passion and dedication. Join me on this journey and witness the impact I can create through innovative and meaningful solutions.',
+        tech: ['HTML', 'CSS', 'Vue.js'],
+        link: 'https://github.com/Chanceux-02/Louie-Jay-Cantores-Portfolio-2'
     }
 ];
   

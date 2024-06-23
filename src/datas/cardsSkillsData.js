@@ -66,6 +66,11 @@ const techStack = [
         image: require('@/assets/projectImage/portfolio.png'),
     },
     {
+        id: 2.5,
+        skill: 'Vue.js',
+        image: require('@/assets/projectImage/portfolio.png'),
+    },
+    {
         id: 3,
         skill: 'mongoDB',
         image: require('@/assets/projectImage/portfolio.png'),

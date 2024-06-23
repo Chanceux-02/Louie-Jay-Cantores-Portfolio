@@ -70,4 +70,51 @@ export default {
   margin-top: 5%;
 }
 
+
+@media (max-width: 1000px) {
+      .image{
+        background-size:contain;
+      }
+     .title{
+        font-size: 2rem;
+      }
+      .about-desc{
+        font-size: 1rem;
+      }
+}
+@media (max-width: 768px) {
+      .about-container{
+        height: 60vh;
+    }
+}
+@media (max-width: 425px) {
+
+  .about-container{
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+  .image{
+    display: none;
+  }
+  .title{
+    font-size: 2rem;
+  }
+  .about-desc{
+    font-size: 0.8rem;
+  }
+  .about-text {
+    background-color: rgb(25, 25, 25, 0.8);
+    max-width: 100%;
+    padding: 15% 10% 0% 10%;
+  }
+  .about-image{
+    padding: 0%;
+    min-height: 0;
+    width: 0%;
+  }
+  
+}
+
+
 </style>

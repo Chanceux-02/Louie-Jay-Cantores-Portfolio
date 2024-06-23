@@ -8,7 +8,7 @@
       <section>
         <p class="educ-title">College</p>
         <p class="school">ILOILO SCIENCE AND TECHNOLOGY UNIVERSITY</p>
-        <p>Bachelor of Science in Information Systems</p>
+        <p class="crs">Bachelor of Science in Information Systems</p>
       </section>
       <section class="date">
         <p>2019 - 2023</p>
@@ -19,7 +19,7 @@
       <section>
         <p class="educ-title">Senior High School</p>
         <p class="school">STI COLLEGE ILOILO</p>
-        <p>Information and Communications Technology (ICT)</p>
+        <p class="crs">Information and Communications Technology (ICT)</p>
       </section>
       <section class="date">
         <p>2017 - 2019</p>
@@ -68,6 +68,59 @@ export default {
 .educ-title{
   color: #F9004D;
 }
+
+ @media (max-width: 1000px) {
+  .education-container{
+    height: 60vh;
+  }
+  .educ-title{
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  .school{
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .crs{
+    font-size: 0.8rem;
+  }
+  .date{
+    font-size: 0.8rem;
+    margin-top: 4%;
+  }
+
+ }
+
+ @media (max-width: 425px) {
+  .education-container{
+      height: 50vh;
+  }
+  .date{
+    font-size: 0.5rem;
+    width: 60px;
+    margin-top: 25px;
+  }
+  .education-level{
+    width: 100%;
+  }
+  .educ-title{
+    font-size: 1rem;
+    font-weight: 900;
+  }
+  .school{
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  .crs{
+    font-size: 0.7rem;
+  }
+  .date{
+    font-size: 0.5rem;
+    margin-top: 4%;
+  }
+
+ }
+ 
 
 
 </style>

@@ -143,5 +143,37 @@ export default {
                 -0.5px  0.5px 0 white,
                 0.5px  0.5px 0 white;
         }
+
+        @media (max-width: 1111px) {
+            .card {
+                width: 800px;
+                max-width: 800px;
+                height: 400px;
+                margin: 2% 0%;
+            }
+            .card-content{
+                padding: 20px 15%;
+
+            }
+            .card p{
+                font-size: 0.8rem;
+            }
+            .proj-title{
+                font-size: 1.5rem !important;
+            }
+            a {
+                width: 20%;
+                font-size: 0.7rem;
+            }
+            .tech a{
+                width: 15%;
+                margin-top: 3%;
+                font-size: 0.7rem;
+            }
+            .tech{
+                width: 70%;
+                margin: 0% auto;
+            }
+        }
            
 </style>

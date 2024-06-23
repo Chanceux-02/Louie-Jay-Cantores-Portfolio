@@ -13,8 +13,8 @@
         <li id="7"><a href="#contact">Contact</a></li>
     </ul>
     <ul class="nav-link">
-        <li><a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank">Linked in</a></li>
-        <li><a href="https://github.com/Chanceux-02" target="_blank">Git hub</a></li>
+        <li> <a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank"><i class="fa-brands fa-linkedin fa-3x mx-2" aria-hidden="true"></i></a></li>
+        <li> <a href="https://github.com/Chanceux-02" target="_blank"><i class="fa-brands fa-square-github fa-3x mx-2" aria-hidden="true"></i></a></li>
     </ul>
   </nav>
 </div>
@@ -135,8 +135,6 @@ export default {
     text-decoration: none;
     padding: 2%;
     margin: 2%;
-    font-size: 1.2rem;
-    font-weight: 600;
   }
   .nav-items {
     display: flex;
@@ -154,7 +152,7 @@ export default {
     justify-content: space-around;
     min-width: 150px;
     max-width: 200px;
-    width: 20%;
+    width: 10%;
     align-items: center;
     margin-right: 5%;
   }
@@ -182,5 +180,17 @@ export default {
     min-width: 15%;
     min-height: 10%;
   }
+
+    @media (max-width: 1000px) {
+
+      .fa-3x {
+          font-size: 2rem;
+      }
+      .nav-link{
+        min-width: 80px;
+        margin-right: 2%;
+      }
+
+    }
 
 </style>

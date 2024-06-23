@@ -4,120 +4,48 @@
 
   <p class="title">Experience</p>
 
-  <div class="exp-work">
+  <div class="exp-work"  v-for="exp in expData" :key="exp.id">
 
     <section class="company">
-      <p class="company-name">Forty Degrees Celcius Inc.</p>
-      <p class="position"><span>Position:</span> Web Developer</p>
+      <p class="company-name">{{exp.company}}</p>
+      <p class="position"><span>Position:</span> {{exp.position}}</p>
       <div class="exp-info">
-        <section>
-          <p class="Task">Tasks and Activities</p>
-          <li>Feature development</li>
-          <li>Bug fixing</li>
-          <li>Specification integration</li>
-          <li>API creation</li>
-          <li>Supporting app development</li>
-          <li>Website maintenance</li>
+        <section class="Task">
+          <p>Tasks and Activities</p>
+          <li  v-for="task in exp.tasks" :key="task">{{task}}</li>
         </section>
-        <section>
-          <p class="Task">Technologies and Tools</p>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript/jQuery</li>
-          <li>PHP/CakePHP</li>
-          <li>Xampp</li>
-          <li>Docker</li>
-          <li>github</li>
-          <li>Jira</li>
+        <section class="Tools">
+          <p>Technologies and Tools</p>
+           <li  v-for="tech in exp.tech" :key="tech">{{tech}}</li>
         </section>
       </div>
     </section>
 
     <section class="dash">
-      <p>----</p>
+      <p>-</p>
     </section>
 
     <section class="month">
-      <p>August - February</p>
-    </section>
-
-  </div>
-
-
-  <div class="exp-work">
-
-    <section class="company">
-      <p class="company-name">College: Capstone Project</p>
-      <p class="position"> <span>Position:</span> Web Developer, Team Leader</p>
-      <div class="exp-info">
-        <section>
-          <p class="Task">Tasks and Activities</p>
-          <li>Developed a web-based booking system <br> for motorcycle taxi
-              transportaion as part of a team project
-          </li>
-       
-        </section>
-        <section>
-          <p class="Task">Technologies and Tools</p>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript/jQuery</li>
-          <li>PHP/Laravel</li>
-          <li>Xampp</li>
-          <li>github</li>
-        </section>
-      </div>
-    </section>
-
-    <section class="dash">
-      <p>----</p>
-    </section>
-
-    <section class="month">
-      <p>2023</p>
-    </section>
-
-  </div>
-
-
-  <div class="exp-work">
-
-    <section class="company">
-      <p class="company-name">Senior High Scool: School Project and Science Fair</p>
-      <p class="position"><span>Position:</span> Developer, Team Leader</p>
-      <div class="exp-info">
-        <section>
-          <p class="Task">Tasks and Activities</p>
-          <li>Developed a blind assistant tool using arduino</li>
-          <li>Developed a static websites.</li>
-       
-        </section>
-        <section>
-          <p class="Task">Technologies and Tools</p>
-          <li>Arduino</li>
-          <li>C++.</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </section>
-      </div>
-    </section>
-
-    <section class="dash">
-      <p>----</p>
-    </section>
-
-    <section class="month">
-      <p>2018</p>
+      <p>{{exp.date}}</p>
     </section>
 
   </div>
 
 </div>
+
 </template>
 
 <script>
+
+import ExpData from '../datas/cardsExpData';
+
 export default {
+
+    data() {
+        return {
+             expData: ExpData,
+        };
+    }
 
 }
 </script>
@@ -135,8 +63,8 @@ export default {
 
 .exp-work{
   display: flex;
-  justify-content: space-around;
-  padding: 2% 0 2% 0 ;
+  justify-content: space-between;
+  padding: 2% 7% 2% 7% ;
   border-bottom: 1px solid black;
 
 }
@@ -152,14 +80,26 @@ li{
 .company{
   font-size: 2rem;
   text-align: start;
-  width: 40%;
+  width: 70%;
+  max-width: 800px;
 }
 .position{
   font-size: 1.5rem;
 }
 .Task{
+   margin-right: 3%;
+   min-width: 300px;
+   width: 50%;
+}
+.Task p{
   font-size: 1rem;
-
+  padding-bottom: 2%;
+  border-bottom: 1px solid #32121c;
+}
+.Tools p{
+  font-size: 1rem;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #32121c;
 }
 .month, .dash{
   padding-top: 2%;
@@ -170,6 +110,80 @@ li{
 }
 .company-name, span{
   color: #F9004D;
+}
+
+ @media (max-width: 1000px) {
+
+    li{
+      font-size: 0.8rem;
+      color: white;
+    }
+    .dash p{
+      width: 40px;
+      margin-top: 40%;
+    }
+    .month{
+      font-size: 0.8rem;
+      margin-top: 1%;
+    }
+    .company{
+      font-size: 1.5rem;
+      text-align: start;
+      width: 80%;
+      max-width: 800px;
+    }
+    .position{
+      font-size: 1rem;
+    }
+    .Task{
+      margin-right: 3%;
+      min-width: 200px;
+      width: 30%;
+    }
+    .Task p{
+      font-size: 0.8rem;
+      padding-bottom: 2%;
+      border-bottom: 1px solid #32121c;
+    }
+    .Tools p{
+      font-size: 0.8rem;
+      padding-bottom: 2%;
+      border-bottom: 1px solid #32121c;
+    }
+ }
+
+@media (max-width: 425px) {
+
+  .month p{
+    font-size: 0.5rem;
+    margin-top: 12px;
+  }
+  .dash p{
+    font-size: 0.5rem;
+  }
+
+  li{
+    font-size: 0.5rem;
+  }
+  .company{
+    font-size: 1rem;
+  }
+  .position{
+    font-size: 0.8rem;
+  }
+  .Task{
+    min-width: 150px;
+  }
+  .Task p{
+    font-size: 0.5rem;
+  }
+  .Tools p{
+    font-size: 0.5rem;
+  }
+  .Tools{
+    min-width: 150px;
+  }
+
 }
 
 
