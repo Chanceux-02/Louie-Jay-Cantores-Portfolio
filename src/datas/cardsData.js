@@ -21,7 +21,7 @@ const cards = [
         image: require('@/assets/projectImage/openfurom.png'),
         title: 'Open Forum',
         desc: 'This Open Forum website offers secure authentication and enables seamless CRUD operations for managing likes, comments, posts, and user profiles. It support REST API for seamless integration and communication.',
-        tech: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'MySQL', 'PHP/Laravel'],
+        tech: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'MySQL', 'Laravel'],
         link: 'https://github.com/Chanceux-02/Open-Forum'
     },
     {
@@ -29,7 +29,7 @@ const cards = [
         image: require('@/assets/projectImage/chatsystem.png'),
         title: 'Company Chat System',
         desc: 'Chat System includes secure authentication, CRUD operations for group and one-on-one chats, message deletion capabilities, profile management, and a REST API for seamless integration and communication.',
-        tech: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'MySQL', 'PHP/Laravel'],
+        tech: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'MySQL', 'Laravel'],
         link: ''
     },
     {
@@ -53,7 +53,7 @@ const cards = [
         image: require('@/assets/projectImage/Book-Store.png'),
         title: 'Student Management System (Laravel)',
         desc: 'Student Management System simplifies administrative tasks with seamless CRUD operations, allowing efficient management of student records. Experience streamlined processes for adding, updating, and deleting student information, empowering educational institutions to optimize their operations and focus on student success.',
-        tech: ['HTML', 'CSS', 'Tailwind', 'MySQL', 'PHP/Laravel'],
+        tech: ['HTML', 'CSS', 'Tailwind', 'MySQL', 'Laravel'],
         link: 'https://github.com/Chanceux-02/Student-Management-System-laravel'
     },
     {

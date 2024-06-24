@@ -175,5 +175,23 @@ export default {
                 margin: 0% auto;
             }
         }
+        @media (max-width: 425px) {
+            .card {
+                margin: 5% 0%;
+                height: 600px;
+
+            }
+            .tech a{
+                width: 20%;
+                margin-top: 3%;
+                font-size: 0.7rem;
+            }
+            .tech{
+                width: 100%;
+                margin: 0% auto;
+            }
+
+        }
+
            
 </style>

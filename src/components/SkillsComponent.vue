@@ -149,7 +149,7 @@ export default {
         margin-top: 10%;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         .card {
             margin: 4% 1%;
             width: 120px;
