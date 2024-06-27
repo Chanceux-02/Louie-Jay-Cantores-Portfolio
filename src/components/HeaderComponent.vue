@@ -1,6 +1,6 @@
 <template>
   <Nav class="nav"/>
-  <div class="header-container">
+  <div class="header-container" id="home">
 
     <div class="intro">
 

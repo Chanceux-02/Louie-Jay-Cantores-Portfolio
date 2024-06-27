@@ -1,6 +1,6 @@
 <template>
 
-<div class="education-container">
+<div class="education-container" id="education">
 
   <p class="title">Education</p>
 

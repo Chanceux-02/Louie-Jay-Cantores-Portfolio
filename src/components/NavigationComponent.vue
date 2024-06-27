@@ -1,23 +1,25 @@
 <template>
 
 <div class="nav-main">
-  <nav class="nav-container" :style="scrollNav">
-  <p v-if="windowWidth <= 768" class="type-textouter"> {{ typedText }} </p>
-    <ul class="nav-items">
-        <p v-if="windowWidth <= 768" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
-        <p  v-if="windowWidth > 768" class="type-text"> {{ typedText }} </p>
-        <li id="1" class="active anch"><a href="#home">Home</a></li>
-        <li id="2" class="anch"><a href="#about">About</a></li>
-        <li id="3" class="anch"><a href="#experience">Experience</a></li>
-        <li id="4" class="anch"><a href="#education">Education</a></li>
-        <li id="5" class="anch"><a href="#skills">Skills</a></li>
-        <li id="6" class="anch"><a href="#portfolio">Portfolio</a></li>
-        <li id="7" class="anch"><a href="#contact">Contact</a></li>
+  <nav ref="navContainerInlineStyle" class="nav-container" :style="scrollNav">
+  <p v-if="windowWidth <= 925" v-show="!navElementVisibility" class="type-textouter"> {{ typedText }} </p>
+    <ul ref="navItemsILineStyle" v-show="navElementVisibility" class="nav-items">
+        <p v-if="windowWidth <= 925"  @click="burger" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
+        <p  v-if="windowWidth > 925" class="type-text"> {{ typedText }} </p>
+        <li id="1" class="active anch"><a href="#home"  @click.prevent="scrollTo('#home')">Home</a></li>
+        <li id="2" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
+        <li id="3" class="anch"><a href="#experience"  @click.prevent="scrollTo('#experience')">Experience</a></li>
+        <li id="4" class="anch"><a href="#education"  @click.prevent="scrollTo('#education')">Education</a></li>
+        <li id="5" class="anch"><a href="#skills"  @click.prevent="scrollTo('#skills')">Skills</a></li>
+        <li id="6" class="anch"><a href="#portfolio"  @click.prevent="scrollTo('#portfolio')">Portfolio</a></li>
+        <li id="7" class="anch"><a href="#contact" @click.prevent="scrollTo('#contact')">Contact</a></li>
     </ul>
     <ul class="nav-link">
         <li> <a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank"><i class="fa-brands fa-linkedin fa-3x mx-2" aria-hidden="true"></i></a></li>
         <li> <a href="https://github.com/Chanceux-02" target="_blank"><i class="fa-brands fa-square-github fa-3x mx-2" aria-hidden="true"></i></a></li>
     </ul>
+
+  <div @click="burger" v-show="!navElementVisibility" class="burger"><i class="fa-solid fa-3x fa-bars"></i></div>
   </nav>
 </div>
   
@@ -47,20 +49,36 @@ export default {
     };
 
     const windowWidth = ref(window.innerWidth);
+    const navElementVisibility = ref(false);
+    const navItemsILineStyle = ref(''); 
+    const navContainerInlineStyle = ref('')   
+
 
     const updateWindowWidth = () => {
       windowWidth.value = window.innerWidth;
+
+        if (windowWidth.value > 925) {
+          navItemsILineStyle.value.style.height = '';
+          navContainerInlineStyle.value.style.padding = '';
+
+          navElementVisibility.value = true;
+        }else{
+           navElementVisibility.value = false;
+        }
+
     };
 
 
     onMounted(() => {
       window.addEventListener('scroll', handleScroll);
       window.addEventListener('resize', updateWindowWidth);
+      window.addEventListener('load', updateWindowWidth);
     });
 
     onUnmounted(() => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', updateWindowWidth);
+      window.removeEventListener('load', updateWindowWidth);
     });
 
 
@@ -100,15 +118,38 @@ export default {
      
       }
     };
+   
+    const burger = () => {
+
+      if (windowWidth.value <= 925) {
+        navElementVisibility.value = !navElementVisibility.value;
+        navItemsILineStyle.value.style.height = '500px';
+        navContainerInlineStyle.value.style.padding = '0px';
+      }
+
+    }
+
+    const scrollTo = (selector) => {
+      const target = document.querySelector(selector);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+        navElementVisibility.value = false;
+      }
+    }
 
     type();
-
-    console.log(windowWidth.value)
 
     return {
       scrollNav,
       typedText,
-      windowWidth
+      windowWidth,
+      burger,
+      navElementVisibility,
+      navItemsILineStyle,
+      navContainerInlineStyle,
+      scrollTo
     };
   }
 };
@@ -199,7 +240,12 @@ export default {
   }
   .type-textouter{
     margin: 1% 9%;
-    height: 30%;
+    /* height: 30%; */
+    min-width: 95px;
+
+  }
+  .burger{
+    display: none;
   }
 
   @media (max-width: 1000px) {
@@ -213,7 +259,7 @@ export default {
     }
 
   }
-  @media (max-width: 768px) {
+  @media (max-width: 925px) {
 
       .nav-items {
         display: flex;
@@ -225,10 +271,11 @@ export default {
         justify-content: space-between;
         margin: 0px;
         padding: 15% 0px 5% 0px;
-        display: none;
+        /* display: none; */
       }
       .nav-container{
         height: 9%;
+        padding: 9px 0px;
       }
       .anch{
         min-width: 60%;
@@ -252,10 +299,18 @@ export default {
         border: 0px;
         color: rgb(190, 187, 187);
         position: absolute;
-        top: 11%;
+        top: 70%;
         left: 93%;
         transform: translate(-50%, -50%);
       }
+
+      .burger{
+        margin: 1% 4%;
+        width: 30px;
+        height: auto;
+        display: block;
+        color: red;
+    }
 
   }
 
@@ -263,11 +318,22 @@ export default {
   
    .nav-container{
         height: 9%;
+        padding-top: 15px;
       }
   .type-textouter{
-      margin: 3% 9%;
+      margin: 1% 9%;
       height: 40%;
     }
+  .nav-link{
+    display: none;
+  }
+  .burger{
+    margin: 1% 4%;
+    width: 30px;
+    height: auto;
+    display: block;
+    color: red;
+  }
 
   }
 

@@ -1,6 +1,6 @@
 <template>
 
-    <div class="portfolio-container">
+    <div class="portfolio-container" id="portfolio">
 
         <p class="title">Portfolio</p>
 

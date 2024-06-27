@@ -1,6 +1,6 @@
 <template>
 
-    <div class="skills-container">
+    <div class="skills-container" id="skills">
 
         <p class="title">Skills</p>
 

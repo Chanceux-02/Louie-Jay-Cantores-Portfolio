@@ -1,6 +1,6 @@
 <template>
 
-<div class="exp-container">
+<div class="exp-container" id="experience">
 
   <p class="title">Experience</p>
 

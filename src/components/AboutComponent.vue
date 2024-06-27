@@ -1,5 +1,5 @@
 <template>
-<div class="about-container">
+<div class="about-container" id="about">
 
   <div class="about-image">
     <div class="image"></div>
