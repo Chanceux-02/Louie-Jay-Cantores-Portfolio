@@ -6,7 +6,7 @@
     <ul ref="navItemsILineStyle" v-show="navElementVisibility" class="nav-items">
         <p v-if="windowWidth <= 925"  @click="burger" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
         <p  v-if="windowWidth > 925" class="type-text"> {{ typedText }} </p>
-        <li :class="{ 'active': activeTab === 'home' }" class="anch"><a href="#home" active  @click.prevent="scrollTo('#home')">Home</a></li>
+        <li :class="{ 'active': activeTab === 'home' }" class="anch"><a href="#home" @click.prevent="scrollTo('#home')">Home</a></li>
         <li :class="{ 'active': activeTab === 'about' }" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
         <li :class="{ 'active': activeTab === 'experience' }" class="anch"><a href="#experience"  @click.prevent="scrollTo('#experience')">Experience</a></li>
         <li :class="{ 'active': activeTab === 'education' }" class="anch"><a href="#education"  @click.prevent="scrollTo('#education')">Education</a></li>
@@ -38,6 +38,8 @@ export default {
     const scrollNav = ref({
       backgroundColor: '',
     });
+
+    const activeTab = ref('home');
     
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -46,6 +48,23 @@ export default {
       } else {
         scrollNav.value.backgroundColor = '';
       }
+
+      if(scrollPosition >= 8680){
+        activeTab.value = 'contact';
+      }else if(scrollPosition >= 6400){
+        activeTab.value = 'portfolio';
+      }else if(scrollPosition >= 4400){
+        activeTab.value = 'skills';
+      }else if(scrollPosition >= 3500){
+        activeTab.value = 'education';
+      }else if(scrollPosition >= 1900){
+        activeTab.value = 'experience';
+      }else if(scrollPosition >= 900) {
+        activeTab.value = 'about';
+      }else{
+        activeTab.value = 'home';
+      }
+
     };
 
     const windowWidth = ref(window.innerWidth);
@@ -129,20 +148,16 @@ export default {
 
     }
 
-    const activeTab = ref('home');
-
     const scrollTo = (selector) => {
       const target = document.querySelector(selector);
       if (target) {
-        console.log(target.id)
         target.scrollIntoView({
           behavior: 'smooth'
         });
 
         if (windowWidth.value < 925) {
-        navElementVisibility.value = false;
+          navElementVisibility.value = false;
         }
-        activeTab.value = target.id;
       }
     }
 
