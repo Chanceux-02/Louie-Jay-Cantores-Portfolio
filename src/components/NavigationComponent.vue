@@ -51,13 +51,13 @@ export default {
 
       if(scrollPosition >= 9000){
         activeTab.value = 'contact';
-      }else if(scrollPosition >= 6100){
+      }else if(scrollPosition >= 5600){
         activeTab.value = 'portfolio';
-      }else if(scrollPosition >= 4100){
+      }else if(scrollPosition >= 3900){
         activeTab.value = 'skills';
-      }else if(scrollPosition >= 3250){
+      }else if(scrollPosition >= 3200){
         activeTab.value = 'education';
-      }else if(scrollPosition >= 1650){
+      }else if(scrollPosition >= 1600){
         activeTab.value = 'experience';
       }else if(scrollPosition >= 700) {
         activeTab.value = 'about';

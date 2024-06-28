@@ -139,15 +139,20 @@ export default {
     .main-skills{
         margin: auto;
         margin-top: 5%;
-        max-width: 70%;
+        max-width: 860px;
+        width: 90%;
     }
     .other-skills{
         margin: auto;
         margin-top: 10%;
-        max-width: 70%;
+        max-width: 860px;
+        width: 90%;
     }
 
     @media (max-width: 1024px) {
+        .skills-container{
+            padding: 0px;
+        }
         .card {
             margin: 4% 1%;
             width: 120px;
@@ -167,6 +172,12 @@ export default {
             font-size: 1rem;
             font-weight: 900;
         }
+         .main-skills{
+            width: 70%;
+        }
+        .other-skills{
+            width: 70%;
+        }
     }
     @media (max-width: 1590px) {
          .card {
@@ -178,7 +189,7 @@ export default {
         .card {
             margin: 3% 1%;
             width: 50px;
-            height: 40px;
+            height: 50px;
         }
         .proj-title{
             color: red;
@@ -202,7 +213,7 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+            height: 40px;
         }
 
     }
