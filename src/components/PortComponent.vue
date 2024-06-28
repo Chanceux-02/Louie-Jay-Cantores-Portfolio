@@ -56,7 +56,6 @@ export default {
             background-position: center;
         }
         .card {
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCmgkix4DEJoToCFKP-g8ztCYa9bIuxAC3pA&s);
             color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -68,7 +67,7 @@ export default {
         }
 
         .card:hover{
-            transform: scale(1.03);
+            transform: scale(1.04);
         }
 
         /* Placeholder image */
@@ -81,10 +80,11 @@ export default {
         /* Text labels */
         .card p {
             font-size: 14px;
+            color: rgba(198, 201, 216, .75);
         }
 
         .card-content{
-            background-color: rgb(16, 16, 16, 1);
+            background-color: rgb(16 16 16 / 95%);
             height: 93.5%;
             padding: 20px;
             margin: 0px;
@@ -93,10 +93,10 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+            border: 2px solid #00000078;
         }
         .card-content:hover{
-            background-color: rgba(39, 12, 12, 0.9);
+            background-color: rgb(16, 16, 16, 1)
 
         }
         .card-container{
@@ -107,7 +107,7 @@ export default {
         }
         a{
             text-decoration: none;
-            color: white;
+            color: rgba(198, 201, 216, .75);;
             border: 1px solid white;
             padding: 1% 3%;
             border-radius: 5px;

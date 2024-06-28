@@ -34,7 +34,7 @@ const cards = [
     },
     {
         id: 5,
-        image: require('@/assets/projectImage/Book-Store.png'),
+        image: require('@/assets/projectImage/s-management.jpg'),
         title: 'Student Management System (PHP)',
         desc: 'Student Management System simplifies administrative tasks with seamless CRUD operations, allowing efficient management of student records. Experience streamlined processes for adding, updating, and deleting student information, empowering educational institutions to optimize their operations and focus on student success.',
         tech: ['HTML', 'CSS', 'Bootstrap', 'MySQL', 'PHP'],
@@ -50,7 +50,7 @@ const cards = [
     },
     {
         id: 7,
-        image: require('@/assets/projectImage/Book-Store.png'),
+        image: require('@/assets/projectImage/s-management1.png'),
         title: 'Student Management System (Laravel)',
         desc: 'Student Management System simplifies administrative tasks with seamless CRUD operations, allowing efficient management of student records. Experience streamlined processes for adding, updating, and deleting student information, empowering educational institutions to optimize their operations and focus on student success.',
         tech: ['HTML', 'CSS', 'Tailwind', 'MySQL', 'Laravel'],
@@ -74,7 +74,7 @@ const cards = [
     },
     {
         id: 10,
-        image: require('@/assets/projectImage/portfolio.png'),
+        image: require('@/assets/projectImage/portfolio-2.png'),
         title: 'Second Online Portfolio',
         desc: 'Here, you\'ll discover a showcase of my skills, experiences, and projects. From web development and design to problem-solving and creative thinking, explore my work that reflects my passion and dedication. Join me on this journey and witness the impact I can create through innovative and meaningful solutions.',
         tech: ['HTML', 'CSS', 'Vue.js'],

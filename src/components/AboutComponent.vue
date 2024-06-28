@@ -53,9 +53,10 @@ export default {
 .image{
     margin-top: 18%;
     margin-left: 40%;
-    background-image: url('@/assets/logo.png');
+    background-image: url('@/assets/myPic/computer.png');
     background-repeat: no-repeat;
     min-height: 200px;
+    background-size: contain;
 }
 
 .title{

@@ -49,17 +49,17 @@ export default {
         scrollNav.value.backgroundColor = '';
       }
 
-      if(scrollPosition >= 8680){
+      if(scrollPosition >= 9000){
         activeTab.value = 'contact';
-      }else if(scrollPosition >= 6400){
+      }else if(scrollPosition >= 6100){
         activeTab.value = 'portfolio';
-      }else if(scrollPosition >= 4400){
+      }else if(scrollPosition >= 4100){
         activeTab.value = 'skills';
-      }else if(scrollPosition >= 3500){
+      }else if(scrollPosition >= 3250){
         activeTab.value = 'education';
-      }else if(scrollPosition >= 1900){
+      }else if(scrollPosition >= 1650){
         activeTab.value = 'experience';
-      }else if(scrollPosition >= 900) {
+      }else if(scrollPosition >= 700) {
         activeTab.value = 'about';
       }else{
         activeTab.value = 'home';

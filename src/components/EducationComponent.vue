@@ -62,7 +62,7 @@ export default {
   font-weight: 900;
 }
 .school{
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 .educ-title{

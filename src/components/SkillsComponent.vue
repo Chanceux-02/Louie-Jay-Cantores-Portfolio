@@ -78,13 +78,12 @@ export default {
         margin: auto;
     }
     .card {
-        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCmgkix4DEJoToCFKP-g8ztCYa9bIuxAC3pA&s);
         color: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-        width: 200px;
+        width: 150px;
         max-width: 800px;
-        height: 150px;
+        height: 100%;
         margin: 2% 1%;
         transition: transform 0.3s ease;
     }
@@ -100,19 +99,14 @@ export default {
         border-radius: 5px;
     }
 
-    /* Text labels */
-    .card p {
-        font-size: 14px;
-    }
-
     .card-content{
-        background-color: rgb(25, 25, 25, 1);
-        height: 93.5%;
+        background-color: rgb(25, 25, 25, 0.8);
         padding: 20px;
         margin: 0px;
         border-radius: 10px;
         text-align: center;
         display: flex;
+        height: 112px;
         flex-direction: column;
         justify-content: space-between;
 
@@ -130,7 +124,7 @@ export default {
 
     .proj-title{
         color: red;
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
         font-weight: 900;
         text-shadow: 
             -0.5px -0.5px 0 white,  
@@ -143,17 +137,21 @@ export default {
         font-weight: 900;
     }
     .main-skills{
+        margin: auto;
         margin-top: 5%;
+        max-width: 70%;
     }
     .other-skills{
+        margin: auto;
         margin-top: 10%;
+        max-width: 70%;
     }
 
     @media (max-width: 1024px) {
         .card {
             margin: 4% 1%;
             width: 120px;
-            height: 50px;
+            height: 100%;
         }
         .proj-title{
             color: red;
