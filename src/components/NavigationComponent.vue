@@ -6,13 +6,13 @@
     <ul ref="navItemsILineStyle" v-show="navElementVisibility" class="nav-items">
         <p v-if="windowWidth <= 925"  @click="burger" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
         <p  v-if="windowWidth > 925" class="type-text"> {{ typedText }} </p>
-        <li id="1" class="active anch"><a href="#home"  @click.prevent="scrollTo('#home')">Home</a></li>
-        <li id="2" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
-        <li id="3" class="anch"><a href="#experience"  @click.prevent="scrollTo('#experience')">Experience</a></li>
-        <li id="4" class="anch"><a href="#education"  @click.prevent="scrollTo('#education')">Education</a></li>
-        <li id="5" class="anch"><a href="#skills"  @click.prevent="scrollTo('#skills')">Skills</a></li>
-        <li id="6" class="anch"><a href="#portfolio"  @click.prevent="scrollTo('#portfolio')">Portfolio</a></li>
-        <li id="7" class="anch"><a href="#contact" @click.prevent="scrollTo('#contact')">Contact</a></li>
+        <li :class="{ 'active': activeTab === 'home' }" class="anch"><a href="#home" active  @click.prevent="scrollTo('#home')">Home</a></li>
+        <li :class="{ 'active': activeTab === 'about' }" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
+        <li :class="{ 'active': activeTab === 'experience' }" class="anch"><a href="#experience"  @click.prevent="scrollTo('#experience')">Experience</a></li>
+        <li :class="{ 'active': activeTab === 'education' }" class="anch"><a href="#education"  @click.prevent="scrollTo('#education')">Education</a></li>
+        <li :class="{ 'active': activeTab === 'skills' }" class="anch"><a href="#skills"  @click.prevent="scrollTo('#skills')">Skills</a></li>
+        <li :class="{ 'active': activeTab === 'portfolio' }" class="anch"><a href="#portfolio"  @click.prevent="scrollTo('#portfolio')">Portfolio</a></li>
+        <li :class="{ 'active': activeTab === 'contact' }" class="anch"><a href="#contact" @click.prevent="scrollTo('#contact')">Contact</a></li>
     </ul>
     <ul class="nav-link">
         <li> <a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank"><i class="fa-brands fa-linkedin fa-3x mx-2" aria-hidden="true"></i></a></li>
@@ -129,13 +129,20 @@ export default {
 
     }
 
+    const activeTab = ref('home');
+
     const scrollTo = (selector) => {
       const target = document.querySelector(selector);
       if (target) {
+        console.log(target.id)
         target.scrollIntoView({
           behavior: 'smooth'
         });
+
+        if (windowWidth.value < 925) {
         navElementVisibility.value = false;
+        }
+        activeTab.value = target.id;
       }
     }
 
@@ -149,7 +156,8 @@ export default {
       navElementVisibility,
       navItemsILineStyle,
       navContainerInlineStyle,
-      scrollTo
+      scrollTo,
+      activeTab
     };
   }
 };
@@ -240,7 +248,7 @@ export default {
   }
   .type-textouter{
     margin: 1% 9%;
-    /* height: 30%; */
+    height: 30%;
     min-width: 95px;
 
   }
