@@ -2,18 +2,22 @@
   <Nav class="nav"/>
   <div class="header-container" id="home">
 
-    <div class="intro">
+    <div class="dim">
 
-      <h1>Full Stack Web Developer</h1>
-      
-      <p class="text">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span>Welcome to my world.</span></p>
+      <div class="intro">
+
+        <h1>Full Stack Web Developer</h1>
+        
+        <p class="text">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span>Welcome to my world.</span></p>
+
+      </div>
+
+      <ul class="nav-link">
+        <li> <a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank"><i class="fa-brands fa-linkedin fa-3x mx-2" aria-hidden="true"></i></a></li>
+        <li> <a href="https://github.com/Chanceux-02" target="_blank"><i class="fa-brands fa-square-github fa-3x mx-2" aria-hidden="true"></i></a></li>
+      </ul>
 
     </div>
-
-    <ul class="nav-link">
-      <li> <a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank"><i class="fa-brands fa-linkedin fa-3x mx-2" aria-hidden="true"></i></a></li>
-      <li> <a href="https://github.com/Chanceux-02" target="_blank"><i class="fa-brands fa-square-github fa-3x mx-2" aria-hidden="true"></i></a></li>
-    </ul>
 
   </div>
 </template>
@@ -36,12 +40,17 @@ export default {
     width: 100%;
   }
   .header-container{
-    padding: 9% 0 0 0;
     min-height: 88vh;
     max-height: 900px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpVc6b5oNxqkkh3vJQ761Wt26gFO5nxTXmVw&s);
+    background-image: url('@/assets/myPic/mypic1.jpg');;
     background-repeat: no-repeat;
     background-size: cover;  
+  }
+  .dim{
+    padding: 9% 0 0 0;
+    background-color: rgb(5 5 5 / 92%);
+    min-height: 88vh;
+    max-height: 900px;
   }
   .intro{
     width: 50%;

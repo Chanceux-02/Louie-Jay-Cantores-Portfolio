@@ -34,7 +34,6 @@ export default {
   background-image: url('@/assets/aboutBG.svg');
   background-size: cover;
   background-position: center;
-  
 }
 
 .about-text{
@@ -45,18 +44,20 @@ export default {
 }
 
 .about-image{
-    padding-top: 15%;
     background-color: rgb(25,25,25,0.8);
     min-height: 200px;
     width: 50%;
+    position: relative;
 }
 .image{
-    margin-top: 18%;
-    margin-left: 40%;
-    background-image: url('@/assets/myPic/computer.png');
+    background-image: url('@/assets/myPic/mypic.jpeg');
     background-repeat: no-repeat;
-    min-height: 200px;
+    height: 60%;
+    width: 90%;
     background-size: contain;
+    position: absolute;
+    top: 20%;
+    left: 10%;
 }
 
 .title{
@@ -82,11 +83,15 @@ export default {
       .about-desc{
         font-size: 1rem;
       }
+      .about-image{
+        display: none;
+      }
 }
 @media (max-width: 768px) {
       .about-container{
         height: 60vh;
     }
+    
 }
 @media (max-width: 425px) {
 
