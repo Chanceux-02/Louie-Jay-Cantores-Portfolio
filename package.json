@@ -1,8 +1,8 @@
 {
-  "name": "louie-jay-cantores-portfolio-2",
+  "name": "louie-jay-cantores-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://chanceux-02.github.io/Louie-Jay-Cantores-Portfolio-2/",
+  "homepage": "https://chanceux-02.github.io/Louie-Jay-Cantores-Portfolio/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
