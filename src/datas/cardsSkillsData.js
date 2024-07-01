@@ -58,12 +58,12 @@ const techStack = [
     {
         id: 1,
         skill: 'Node.js',
-        image: require('@/assets/skillsImage/node-express.png'),
+        image: require('@/assets/skillsImage/node.png'),
     },
     {
         id: 2,
         skill: 'Express.js',
-        image: require('@/assets/skillsImage/node-express.png'),
+        image: require('@/assets/skillsImage/express.png'),
     },
     {
         id: 2.5,

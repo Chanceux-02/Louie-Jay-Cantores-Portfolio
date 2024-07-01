@@ -2,12 +2,12 @@
 <div class="about-container" id="about">
 
   <div class="about-image">
-    <div class="image"></div>
+    <div class="image" data-aos="zoom-in"></div>
   </div>
 
   <div class="about-text">
-    <p class="title"><span style="color: #F9004D;">About</span> Me</p>
-    <p class="about-desc">
+    <p class="title" data-aos="zoom-in-down"><span style="color: #F9004D;">About</span> Me</p>
+    <p class="about-desc" data-aos="zoom-in">
       Hi, I am a full stack developer, with a strong foundation in web development. From concept to execution, I thrive as a valuable team player. Equipped with expertise in database management, responsive design techniques, and version control systems like Git, I am poised to launch a successful career in web development.
     </p>
   </div>

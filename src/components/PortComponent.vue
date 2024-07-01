@@ -2,13 +2,13 @@
 
     <div class="portfolio-container" id="portfolio">
 
-        <p class="title">Portfolio</p>
+        <p class="title" data-aos="zoom-in-down">Portfolio</p>
 
         <div class="card-container">
 
             <!-- looping throug datas -->
 
-            <CardComponent v-for="card in cards" :key="card.id" :backgroundImage="card.image">
+            <CardComponent v-for="card in cards" :key="card.id" :backgroundImage="card.image" data-aos="zoom-in-up">
                 <div class="card-content">
                     <section>
                         <p class="proj-title">{{card.title}}</p>

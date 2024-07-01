@@ -6,9 +6,9 @@
 
       <div class="intro">
 
-        <h1>Full Stack Web Developer</h1>
+        <h1 data-aos="zoom-in-down">Full Stack Web Developer</h1>
         
-        <p class="text">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span>Welcome to my world.</span></p>
+        <p class="text" data-aos="fade-right">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span>Welcome to my world.</span></p>
 
       </div>
 
@@ -42,13 +42,13 @@ export default {
   .header-container{
     min-height: 88vh;
     max-height: 900px;
-    background-image: url('@/assets/myPic/mypic1.jpg');;
+    background-image: url('@/assets/myPic/mypic1.jpg');
     background-repeat: no-repeat;
     background-size: cover;  
   }
   .dim{
     padding: 9% 0 0 0;
-    background-color: rgb(5 5 5 / 92%);
+    background-color: rgb(5 5 5 / 81%);
     min-height: 88vh;
     max-height: 900px;
   }

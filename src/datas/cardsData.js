@@ -26,18 +26,26 @@ const cards = [
     },
     {
         id: 4,
-        image: require('@/assets/projectImage/chatsystem.png'),
+        image: require('@/assets/projectImage/chatlaravel.webp'),
         title: 'Company Chat System',
         desc: 'Chat System includes secure authentication, CRUD operations for group and one-on-one chats, message deletion capabilities, profile management, and a REST API for seamless integration and communication.',
-        tech: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'MySQL', 'Laravel'],
-        link: ''
+        tech: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'Ajax', 'MySQL', 'Laravel'],
+        link: 'https://github.com/Chanceux-02/laravel-chat-system'
+    },
+    {
+        id: 4.1,
+        image: require('@/assets/projectImage/chatsystem.png'),
+        title: 'Chat System',
+        desc: 'Chat System includes secure authentication, CRUD operations for group and one-on-one chats, message deletion capabilities, profile management, and a REST API for seamless integration and communication.',
+        tech: ['HTML', 'CSS', 'Bootstrap', 'PHP', 'jQuery', 'Ajax', 'MySQL'],
+        link: 'https://github.com/Chanceux-02/Chat-System'
     },
     {
         id: 5,
         image: require('@/assets/projectImage/s-management.jpg'),
         title: 'Student Management System (PHP)',
         desc: 'Student Management System simplifies administrative tasks with seamless CRUD operations, allowing efficient management of student records. Experience streamlined processes for adding, updating, and deleting student information, empowering educational institutions to optimize their operations and focus on student success.',
-        tech: ['HTML', 'CSS', 'Bootstrap', 'MySQL', 'PHP'],
+        tech: ['HTML', 'CSS', 'Bootstrap', 'MySQL', 'PHP', 'MVC model'],
         link: 'https://github.com/Chanceux-02/student-management-system'
     },
     {
@@ -45,8 +53,8 @@ const cards = [
         image: require('@/assets/projectImage/digitalmarketing.png'),
         title: 'Digital Marketing',
         desc: 'This Digital Marketing platform offers comprehensive features, including CRUD operations for profiles and items, a dynamic news feed, robust authentication, and filtering capabilities for efficient item management. Experience a seamless and customizable solution tailored to your digital marketing needs.',
-        tech: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'MySQL', 'PHP'],
-        link: ''
+        tech: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'MySQL', 'PHP', 'MVC model'],
+        link: 'https://github.com/Chanceux-02/Rogen-Digital-Marketplace'
     },
     {
         id: 7,
@@ -69,7 +77,7 @@ const cards = [
         image: require('@/assets/projectImage/portfolio.png'),
         title: 'First Online Portfolio',
         desc: 'Here, you\'ll discover a showcase of my skills, experiences, and projects. From web development and design to problem-solving and creative thinking, explore my work that reflects my passion and dedication. Join me on this journey and witness the impact I can create through innovative and meaningful solutions.',
-        tech: ['HTML', 'CSS', 'Bootstrap', 'JS library (AOS)'],
+        tech: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'JS library (AOS)'],
         link: 'https://github.com/Chanceux-02/Louie-Jay-Cantores-Portfolio'
     },
     {
@@ -77,7 +85,7 @@ const cards = [
         image: require('@/assets/projectImage/portfolio-2.png'),
         title: 'Second Online Portfolio',
         desc: 'Here, you\'ll discover a showcase of my skills, experiences, and projects. From web development and design to problem-solving and creative thinking, explore my work that reflects my passion and dedication. Join me on this journey and witness the impact I can create through innovative and meaningful solutions.',
-        tech: ['HTML', 'CSS', 'Vue.js'],
+        tech: ['HTML', 'CSS', 'Vue.js', 'JS library (AOS)'],
         link: 'https://github.com/Chanceux-02/Louie-Jay-Cantores-Portfolio-2'
     }
 ];

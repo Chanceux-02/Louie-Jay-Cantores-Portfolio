@@ -2,20 +2,20 @@
 
 <div class="container" id="contact">
 
-  <p class="title">Contact</p>
+  <p class="title" data-aos="zoom-in-down">Contact</p>
 
   <p class="copy-message" v-show="show">Text copied to clipboard!</p>
   
   <section class="footer">
       <br>
       <div class="opacity-50 lh-1"><i class="fa-solid fa-phone fa-2x" aria-hidden="true"></i></div>
-      <p class=" lh-1 contact"  @click="copyText('0909-151-3512')">0909-151-3512</p>
+      <p class=" lh-1 contact"  @click="copyText('0909-151-3512')" data-aos="zoom-in">0909-151-3512</p>
       <div class="opacity-50 lh-1"><i class="fa-solid fa-envelope fa-2x" aria-hidden="true"></i></div>
-      <p class=" lh-1 contact"  @click="copyText('louiejaycantores@gmail.com')">louiejaycantores@gmail.com</p>
+      <p class=" lh-1 contact"  @click="copyText('louiejaycantores@gmail.com')" data-aos="zoom-in">louiejaycantores@gmail.com</p>
       <br>
       <section class="links d-flex justify-content-center">
-        <a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank"><i class="fa-brands fa-linkedin fa-4x mx-2" aria-hidden="true"></i></a>
-        <a href="https://github.com/Chanceux-02" target="_blank"><i class="fa-brands fa-square-github fa-4x mx-2" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank" data-aos="flip-left"><i class="fa-brands fa-linkedin fa-4x mx-2" aria-hidden="true"></i></a>
+        <a href="https://github.com/Chanceux-02" target="_blank" data-aos="flip-right"><i class="fa-brands fa-square-github fa-4x mx-2" aria-hidden="true"></i></a>
       </section>
   </section>
 

@@ -2,7 +2,7 @@
 
     <div class="skills-container" id="skills">
 
-        <p class="title">Skills</p>
+        <p class="title" data-aos="zoom-in-down">Skills</p>
 
         <section class="main-skills">
           
@@ -12,7 +12,7 @@
 
               <!-- looping throug datas -->
 
-              <CardComponent v-for="skill in skills" :key="skill.id" :backgroundImage="skill.image">
+              <CardComponent v-for="skill in skills" :key="skill.id" :backgroundImage="skill.image" data-aos="flip-up">
                   <div class="card-content">
                       <section>
                           <p class="proj-title">{{skill.skill}}</p>
@@ -30,7 +30,7 @@
 
               <!-- looping throug datas -->
 
-              <CardComponent v-for="tech in techStacks" :key="tech.id" :backgroundImage="tech.image">
+              <CardComponent v-for="tech in techStacks" :key="tech.id" :backgroundImage="tech.image" data-aos="flip-up">
                   <div class="card-content">
                       <section>
                           <p class="proj-title">{{tech.skill}}</p>
@@ -151,7 +151,7 @@ export default {
 
     @media (max-width: 1024px) {
         .skills-container{
-            padding: 0px;
+            padding: 8% 0%;;
         }
         .card {
             margin: 4% 1%;

@@ -2,9 +2,9 @@
 
 <div class="education-container" id="education">
 
-  <p class="title">Education</p>
+  <p class="title" data-aos="zoom-in-down">Education</p>
 
-  <div class="education-level">
+  <div class="education-level" data-aos="fade-up">
       <section>
         <p class="educ-title">College</p>
         <p class="school">ILOILO SCIENCE AND TECHNOLOGY UNIVERSITY</p>
@@ -15,7 +15,7 @@
       </section>
   </div>
 
-  <div class="education-level">
+  <div class="education-level" data-aos="fade-up">
       <section>
         <p class="educ-title">Senior High School</p>
         <p class="school">STI COLLEGE ILOILO</p>

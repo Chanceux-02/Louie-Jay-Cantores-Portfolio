@@ -2,11 +2,11 @@
 
 <div class="exp-container" id="experience">
 
-  <p class="title">Experience</p>
+  <p class="title" data-aos="zoom-in-down">Experience</p>
 
   <div class="exp-work"  v-for="exp in expData" :key="exp.id">
 
-    <section class="company">
+    <section class="company" data-aos="fade-right">
       <p class="company-name">{{exp.company}}</p>
       <p class="position"><span>Position:</span> {{exp.position}}</p>
       <div class="exp-info">
@@ -21,11 +21,11 @@
       </div>
     </section>
 
-    <section class="dash">
+    <section class="dash" :data-aos="monthAnimation ? 'fade-right' : 'fade-left'">
       <p>-</p>
     </section>
 
-    <section class="month">
+    <section class="month" :data-aos="monthAnimation ? 'fade-right' : 'fade-left'">
       <p>{{exp.date}}</p>
     </section>
 
@@ -38,13 +38,40 @@
 <script>
 
 import ExpData from '../datas/cardsExpData';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 export default {
 
-    data() {
-        return {
-             expData: ExpData,
-        };
+    setup(){
+
+      const windowWidth = ref(window.innerWidth);
+      const monthAnimation = ref(true);
+
+      const updateWindowWidth = () => {
+          windowWidth.value = window.innerWidth;
+
+          if (windowWidth.value <= 706) {
+            monthAnimation.value = true;
+          }else{
+            monthAnimation.value = false;
+          }
+      };
+
+      onMounted(() => {
+          window.addEventListener('resize', updateWindowWidth);
+          window.addEventListener('load', updateWindowWidth);
+      });
+
+      onUnmounted(() => {
+          window.removeEventListener('resize', updateWindowWidth);
+          window.removeEventListener('load', updateWindowWidth);
+      });
+
+
+      return {
+            expData: ExpData,
+            monthAnimation
+      };
     }
 
 }

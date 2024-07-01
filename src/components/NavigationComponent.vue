@@ -4,7 +4,7 @@
   <nav ref="navContainerInlineStyle" class="nav-container" :style="scrollNav">
   <p v-if="windowWidth <= 925" v-show="!navElementVisibility" class="type-textouter"> {{ typedText }} </p>
     <ul ref="navItemsILineStyle" v-show="navElementVisibility" class="nav-items">
-        <p v-if="windowWidth <= 925"  @click="burger" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
+        <p v-if="windowWidth <= 925"  @click="burger(0)" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
         <p  v-if="windowWidth > 925" class="type-text"> {{ typedText }} </p>
         <li :class="{ 'active': activeTab === 'home' }" class="anch"><a href="#home" @click.prevent="scrollTo('#home')">Home</a></li>
         <li :class="{ 'active': activeTab === 'about' }" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
@@ -15,11 +15,12 @@
         <li :class="{ 'active': activeTab === 'contact' }" class="anch"><a href="#contact" @click.prevent="scrollTo('#contact')">Contact</a></li>
     </ul>
     <ul class="nav-link">
+        <!-- <li> <a href="https://drive.google.com/drive/folders/10Ki3ut0qQUHM5fbjkim3I61-ja-oo6Wr" target="_blank" class="resume"></a></li> -->
         <li> <a href="https://www.linkedin.com/in/louie-jay-cantores-988a79233" target="_blank"><i class="fa-brands fa-linkedin fa-3x mx-2" aria-hidden="true"></i></a></li>
         <li> <a href="https://github.com/Chanceux-02" target="_blank"><i class="fa-brands fa-square-github fa-3x mx-2" aria-hidden="true"></i></a></li>
     </ul>
 
-  <div @click="burger" v-show="!navElementVisibility" class="burger"><i class="fa-solid fa-3x fa-bars"></i></div>
+  <div @click="burger(1)" v-show="!navElementVisibility" class="burger"><i class="fa-solid fa-3x fa-bars"></i></div>
   </nav>
 </div>
   
@@ -138,22 +139,32 @@ export default {
       }
     };
    
-    const burger = () => {
+    const burger = (type) => {
 
       if (windowWidth.value <= 925) {
         navElementVisibility.value = !navElementVisibility.value;
-        navItemsILineStyle.value.style.height = '500px';
-        navContainerInlineStyle.value.style.padding = '0px';
+        if(type == 1){
+          navItemsILineStyle.value.style.height = '500px';
+          navContainerInlineStyle.value.style.padding = '0px';
+        }else{
+          navItemsILineStyle.value.style.height = '';
+          navContainerInlineStyle.value.style.padding = '';
+        }
+       
       }
 
     }
 
     const scrollTo = (selector) => {
       const target = document.querySelector(selector);
+      console.log(123)
       if (target) {
         target.scrollIntoView({
           behavior: 'smooth'
         });
+        
+        navItemsILineStyle.value.style.height = '';
+        navContainerInlineStyle.value.style.padding = '';
 
         if (windowWidth.value < 925) {
           navElementVisibility.value = false;
@@ -252,10 +263,10 @@ export default {
   }
 
   li:hover{
-    border-bottom: rgba(187, 4, 4, 0.5) 5px solid;
-    border-radius: 0px;
+    /* border-bottom: rgba(187, 4, 4, 0.5) 5px solid; */
+    border-radius: 8px;
     transform: scale(1.2);
-
+    background-color: rgba(187, 4, 4, 0.2);
   }
   .type-text{
     min-width: 15%;
@@ -270,6 +281,15 @@ export default {
   .burger{
     display: none;
   }
+  /* .resume{
+    border: 1px solid black;
+    background-image: url('@/assets/myPic/resume.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+  } */
 
   @media (max-width: 1000px) {
 
