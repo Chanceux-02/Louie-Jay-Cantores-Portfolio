@@ -86,10 +86,21 @@ export default {
       .about-image{
         display: none;
       }
+      .about-text {
+        max-width: 100%;
+      }
+      .about-text p{
+        max-width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+      }
 }
 @media (max-width: 768px) {
-      .about-container{
-        height: 60vh;
+    .about-container{
+      height: 60vh;
+    }
+    .about-desc{
+      font-size: 0.8rem;
     }
     
 }
@@ -99,6 +110,7 @@ export default {
     display: block;
     margin: auto;
     width: 100%;
+    max-height: 450px;
   }
   .image{
     display: none;
@@ -106,13 +118,12 @@ export default {
   .title{
     font-size: 2rem;
   }
-  .about-desc{
-    font-size: 0.8rem;
-  }
+ 
   .about-text {
     background-color: rgb(25, 25, 25, 0.8);
     max-width: 100%;
-    padding: 15% 10% 0% 10%;
+    padding: 15% 0% 0% 0%;
+    height: 100%;
   }
   .about-image{
     padding: 0%;

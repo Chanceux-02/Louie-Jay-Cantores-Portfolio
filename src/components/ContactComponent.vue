@@ -4,8 +4,6 @@
 
   <p class="title" data-aos="zoom-in-down">Contact</p>
 
-  <p class="copy-message" v-show="show">Text copied to clipboard!</p>
-  
   <section class="footer">
       <br>
       <div class="opacity-50 lh-1"><i class="fa-solid fa-phone fa-2x" aria-hidden="true"></i></div>
@@ -31,7 +29,6 @@ import ClipboardJS from 'clipboard';
 export default {
 setup() {
     const clipboard = ref(null); 
-    const show = ref(false); 
     let timeoutId = null;
 
     onMounted(() => {
@@ -52,22 +49,18 @@ setup() {
         document.execCommand("copy");
         document.body.removeChild(tempInput); 
 
-        showMessage(); 
+        if(text == '0909-151-3512'){
+          alert('Phone number copied to clipboard!')
+        }else{
+          alert('Email copied to clipboard!')
+        }
+
       }, 500);
      
     };
 
-    const showMessage = () => {
-        show.value = true;
-
-        setTimeout(() => {
-          show.value = !show.value;
-        }, 1000);
-    };
-
     return {
       copyText,
-      show
     };
   }
 }
@@ -106,7 +99,7 @@ a:hover{
 .contact{
   transition: transform 0.3s ease;
   cursor: pointer;
-  width: 25%;
+  width: 35%;
   margin: 1% auto 3% auto;
 }
 .contact:hover{
@@ -123,18 +116,26 @@ a:hover{
               -0.1px  0.1px 0 rgb(72, 71, 71),  
               0.1px  0.1px 0 rgb(72, 71, 71);
   position: absolute;
-  top: 28%;
+  top: 180px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
+  
   .contact{
-    width: 100%;
+    width: 50%;
     font-size: 0.8rem;
     margin: 1% auto 3% auto;
   }
+  .contact:hover{
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 425px) {
+
   .container{
     height: 50vh;
   }

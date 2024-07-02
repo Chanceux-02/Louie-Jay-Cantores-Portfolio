@@ -185,7 +185,6 @@ export default {
         }
     }
     @media (max-width: 425px) {
-
         .card {
             margin: 3% 1%;
             width: 50px;

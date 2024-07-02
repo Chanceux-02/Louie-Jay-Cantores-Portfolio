@@ -157,7 +157,6 @@ export default {
 
     const scrollTo = (selector) => {
       const target = document.querySelector(selector);
-      console.log(123)
       if (target) {
         target.scrollIntoView({
           behavior: 'smooth'

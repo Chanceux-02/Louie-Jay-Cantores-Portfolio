@@ -98,6 +98,9 @@ export default {
 
   }
   @media (max-width: 425px) {
+    .header-container, .dim{
+      max-height: 450px;
+    }
     .intro{
       width: 90%;
       margin-top: 20%;

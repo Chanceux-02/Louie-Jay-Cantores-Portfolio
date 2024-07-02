@@ -94,6 +94,7 @@ export default {
  @media (max-width: 425px) {
   .education-container{
       height: 50vh;
+      max-height: 450px;
   }
   .date{
     font-size: 0.5rem;
