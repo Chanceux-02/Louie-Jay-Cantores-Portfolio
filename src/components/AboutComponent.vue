@@ -8,7 +8,7 @@
   <div class="about-text">
     <p class="title" data-aos="zoom-in-down"><span style="color: #F9004D;">About</span> Me</p>
     <p class="about-desc" data-aos="zoom-in">
-      Hi, I am a full stack developer, with a strong foundation in web development. From concept to execution, I thrive as a valuable team player. Equipped with expertise in database management, responsive design techniques, and version control systems like Git, I am poised to launch a successful career in web development.
+      Freelance Shopify developer passionate about crafting seamless e-commerce experiences using Liquid, JavaScript, HTML, and CSS. I specialize in customizing themes, improving site speed, and optimizing for conversions to help businesses turn more visitors into customers. I focus on building responsive, user-friendly stores and enhancing online performance, delivering solutions that elevate brands and drive measurable results.
     </p>
   </div>
 

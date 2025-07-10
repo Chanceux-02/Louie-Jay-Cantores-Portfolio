@@ -2,33 +2,33 @@ const skills = [
 
     {
         id: 1,
+        skill: 'Shopify',
+        image: require('@/assets/skillsImage/html-5.png'),
+    },
+    {
+        id: 12,
+        skill: 'Shopify admin',
+        image: require('@/assets/skillsImage/html-5.png'),
+    },
+    {
+        id: 13,
+        skill: 'Liquid',
+        image: require('@/assets/skillsImage/html-5.png'),
+    },
+    {
+        id: 14,
         skill: 'HTML',
         image: require('@/assets/skillsImage/html-5.png'),
     },
     {
-        id: 1,
+        id: 15,
         skill: 'CSS',
         image: require('@/assets/skillsImage/css-3.png'),
     },
     {
-        id: 1,
+        id: 16,
         skill: 'JavaScript',
         image: require('@/assets/skillsImage/js.png'),
-    },
-    {
-        id: 2,
-        skill: 'PHP',
-        image: require('@/assets/skillsImage/php.png'),
-    },
-    {
-        id: 3,
-        skill: 'MySQL',
-        image: require('@/assets/skillsImage/mysql.svg'),
-    },
-    {
-        id: 4,
-        skill: 'Laravel',
-        image: require('@/assets/skillsImage/laravel.svg'),
     },
     {
         id: 5,
@@ -36,21 +36,10 @@ const skills = [
         image: require('@/assets/skillsImage/jquery.svg'),
     },
     {
-        id: 6,
-        skill: 'CakePHP',
-        image: require('@/assets/skillsImage/cakephp.svg'),
-    },
-    {
         id: 7,
         skill: 'Git',
         image: require('@/assets/skillsImage/git.svg'),
-    },
-    {
-        id: 8,
-        skill: 'Bootstrap',
-        image: require('@/assets/skillsImage/bootstrap.svg'),
-    },
-
+    }
 ];
 
 const techStack = [

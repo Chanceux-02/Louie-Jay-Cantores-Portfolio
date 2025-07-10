@@ -6,9 +6,10 @@
 
       <div class="intro">
 
-        <h1 data-aos="zoom-in-down">Full Stack Web Developer</h1>
+        <h1 data-aos="zoom-in-down">Freelance Shopify Developer</h1>
         
-        <p class="text" data-aos="fade-right">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span>Welcome to my world.</span></p>
+        <!-- <p class="text" data-aos="fade-right">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span>Welcome to my world.</span></p> -->
+        <p class="text" data-aos="fade-right">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span class="other-info">I make Shopify stores shine.</span></p>
 
       </div>
 
@@ -72,11 +73,15 @@ export default {
   }
 
   .text {
-      line-height: 1.5; /* Adjust the value as needed */
+    line-height: 1.5; /* Adjust the value as needed */
   }
    .nav-link{
       visibility: hidden;
-    }
+  }
+
+  .text .other-info{
+    font-size: 2rem !important;
+  }
 
   @media (max-width: 1000px) {
     .intro{
@@ -109,7 +114,7 @@ export default {
     .intro p{
         font-size: 1.5rem;
     }
-    h1{
+    h1, .text .other-info{
         font-size: 1rem !important;
     }
 

@@ -6,8 +6,6 @@
 
         <section class="main-skills">
           
-          <p class="tech-stack">Main Tech Stack</p>
-
           <div class="card-container">
 
               <!-- looping throug datas -->
@@ -16,24 +14,6 @@
                   <div class="card-content">
                       <section>
                           <p class="proj-title">{{skill.skill}}</p>
-                      </section>
-                  </div>
-              </CardComponent>
-
-          </div>
-        </section>
-
-        <section class="other-skills">
-           <p class="tech-stack">Other Skills</p>
-
-          <div class="card-container">
-
-              <!-- looping throug datas -->
-
-              <CardComponent v-for="tech in techStacks" :key="tech.id" :backgroundImage="tech.image" data-aos="flip-up">
-                  <div class="card-content">
-                      <section>
-                          <p class="proj-title">{{tech.skill}}</p>
                       </section>
                   </div>
               </CardComponent>
