@@ -7,7 +7,9 @@
     </a>
     <ul ref="navItemsILineStyle" v-show="navElementVisibility" class="nav-items">
         <p v-if="windowWidth <= 925"  @click="burger(0)" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
-        <p  v-if="windowWidth > 925" class="type-text"> {{ typedText }} </p>
+        <a href="#home" @click.prevent="scrollTo('#home')" class="def-home-link-2">
+          <p  v-if="windowWidth > 925" class="type-text"> {{ typedText }} </p>
+        </a>
         <li :class="{ 'active': activeTab === 'home' }" class="anch"><a href="#home" @click.prevent="scrollTo('#home')">Home</a></li>
         <li :class="{ 'active': activeTab === 'about' }" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
         <li :class="{ 'active': activeTab === 'portfolio' }" class="anch"><a href="#portfolio"  @click.prevent="scrollTo('#portfolio')">Portfolio</a></li>
@@ -213,7 +215,6 @@ export default {
     justify-content: space-between;
     transition: background-color 0.5s;
     position: fixed;
-    max-width: 2000px;
     height: 9%;
     padding-top: 15px;
   }
@@ -257,6 +258,7 @@ export default {
     justify-content: space-between;
     margin: 0px;
     padding: 15% 0px 5% 0px;
+    max-width: 1600px;
   }
 
   .anch{
@@ -309,6 +311,8 @@ export default {
   .type-text{
     min-width: 15%;
     min-height: 10%;
+    margin: 1% 9%;
+    height: 100%;
   }
 
   .type-textouter{
@@ -334,6 +338,92 @@ export default {
     display: block;
     color: red;
     font-size: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    .burger{
+      display: none;
+    }
+
+    .nav-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transition: background-color 0.5s;
+      position: fixed;
+    }
+
+    .nav-items {
+      position: relative;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      flex-direction: row;
+      background: transparent;
+      padding: 0;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+   .nav-items li{
+      width: 100px;
+    }
+
+    .nav-link{
+      display: flex;
+      justify-content: space-around;
+      min-width: 150px;
+      max-width: 200px;
+      width: 10%;
+      align-items: center;
+      margin-right: 5%;
+    }
+
+    .nav-link li{
+      width: 100%;
+    }
+
+    .anch{
+      min-width: unset;
+    }
+
+    .def-home-link{
+      display: none;
+    }
+
+    .def-home-link-2{
+      text-decoration: none;
+      width: 30%;
+      height: 40%;
+      padding: 2% 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .type-text{
+      margin: 0 9%;
+    }
+
+  }
+
+  @media (min-width: 1900px) {
+    .type-text, .anch{
+      font-size: 2rem;
+    }
+
+    .nav-items {
+      max-width: 1900px;
+    }
+
+    .nav-items .anch{
+      margin: 0;
+      width: 200px;
+    }
+
+    .fa-brands{
+      font-size: 5rem;
+    }
   }
   
 </style>
