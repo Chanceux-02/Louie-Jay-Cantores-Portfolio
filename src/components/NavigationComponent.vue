@@ -2,7 +2,9 @@
 
 <div class="nav-main">
   <nav ref="navContainerInlineStyle" class="nav-container" :style="scrollNav">
-  <p v-if="windowWidth <= 925" v-show="!navElementVisibility" class="type-textouter"> {{ typedText }} </p>
+    <a href="#home" @click.prevent="scrollTo('#home')" class="def-home-link">
+      <p v-if="windowWidth <= 925" v-show="!navElementVisibility" class="type-textouter"> {{ typedText }} </p>
+    </a>
     <ul ref="navItemsILineStyle" v-show="navElementVisibility" class="nav-items">
         <p v-if="windowWidth <= 925"  @click="burger(0)" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
         <p  v-if="windowWidth > 925" class="type-text"> {{ typedText }} </p>
@@ -18,7 +20,7 @@
         <li> <a href="https://github.com/Chanceux-02" target="_blank"><i class="fa-brands fa-square-github fa-3x mx-2" aria-hidden="true"></i></a></li>
     </ul>
 
-  <div @click="burger(1)" v-show="!navElementVisibility" class="burger"><i class="fa-solid fa-3x fa-bars"></i></div>
+  <div @click="burger(1)" v-show="!navElementVisibility" class="burger"><i class="fa-solid fa-bars"></i></div>
   </nav>
 </div>
   
@@ -212,6 +214,8 @@ export default {
     transition: background-color 0.5s;
     position: fixed;
     max-width: 2000px;
+    height: 9%;
+    padding-top: 15px;
   }
 
   ul{
@@ -220,30 +224,52 @@ export default {
 
   li{
     list-style: none;
-    padding: 2%;
     border-bottom:  rgba(0, 0, 0, 0) 5px solid;
     border-radius: 5px;
     transition: transform 0.3s ease;
 
   }
 
-  a {
-    color:white;
+  .def-home-link{
     text-decoration: none;
-    padding: 2%;
-    margin: 2%;
+    width: 30%;
+    height: 40%;
+    padding: 2% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a:not(.def-home-link) {
+    text-decoration: none;
+    color:white;
+    padding: 10px 15px;
+    display: block;
+
   }
   .nav-items {
+    position: fixed;
     display: flex;
-    width: 60%;
-    min-width: 700px;
-    max-width: 800px;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
     align-items: center;
     justify-content: space-between;
+    margin: 0px;
+    padding: 15% 0px 5% 0px;
   }
+
+  .anch{
+    min-width: 60%;
+    margin: auto;
+    border-bottom: 1px solid rgba(146, 146, 146, 0.5);
+    border-radius: 0px;
+  }
+
   .nav-items li{
     width: 100px;
   }
+
   .nav-link{
     display: flex;
     justify-content: space-around;
@@ -252,7 +278,9 @@ export default {
     width: 10%;
     align-items: center;
     margin-right: 5%;
+    display: none;
   }
+
   .nav-link li{
     width: 100%;
   }
@@ -266,129 +294,46 @@ export default {
     padding: 2%;
     background: rgb(22, 22, 22);
   }
+  
   .active{
       border-bottom: rgba(187, 4, 4, 0.5) 5px solid;
       border-radius: 0px;
   }
 
   li:hover{
-    /* border-bottom: rgba(187, 4, 4, 0.5) 5px solid; */
     border-radius: 8px;
     transform: scale(1.2);
     background-color: rgba(187, 4, 4, 0.2);
   }
+
   .type-text{
     min-width: 15%;
     min-height: 10%;
   }
+
   .type-textouter{
+    min-width: 100px;
     margin: 1% 9%;
-    height: 30%;
-    min-width: 95px;
-
+    height: 100%;
   }
-  .burger{
-    display: none;
-  }
-  /* .resume{
-    border: 1px solid black;
-    background-image: url('@/assets/myPic/resume.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-  } */
 
-  @media (max-width: 1000px) {
-
-    .fa-3x {
-        font-size: 2rem;
-    }
-    .nav-link{
-      min-width: 80px;
-      margin-right: 2%;
-    }
-
-  }
-  @media (max-width: 925px) {
-
-      .nav-items {
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        min-width: 100%;
-        max-width: 800px;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0px;
-        padding: 15% 0px 5% 0px;
-        /* display: none; */
-      }
-      .nav-container{
-        height: 9%;
-        padding: 9px 0px;
-      }
-      .anch{
-        min-width: 60%;
-        margin: auto;
-        border-bottom: 1px solid rgb(255, 0, 0, 0.5);
-        border-radius: 0px;
-      }
-      .nav-link{
-        display: flex;
-        justify-content: space-around;
-        min-width: 150px;
-        max-width: 200px;
-        width: 10%;
-        align-items: center;
-        margin-right: 5%;
-      }
-      .nav-link li{
-        display: none;
-      }
-      .close{
-        border: 0px;
-        color: rgb(190, 187, 187);
-        position: absolute;
-        top: 70%;
-        left: 93%;
-        transform: translate(-50%, -50%);
-      }
-
-      .burger{
-        margin: 1% 4%;
-        width: 30px;
-        height: auto;
-        display: block;
-        color: red;
-    }
+  .close{
+    border: 0px;
+    color: rgb(190, 187, 187);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
 
   }
 
-  @media (max-width: 426px) {
-  
-   .nav-container{
-        height: 9%;
-        padding-top: 15px;
-      }
-  .type-textouter{
-      margin: 1% 9%;
-      height: 40%;
-    }
-  .nav-link{
-    display: none;
-  }
   .burger{
     margin: 1% 4%;
     width: 30px;
     height: auto;
     display: block;
     color: red;
+    font-size: 2rem;
   }
-
-  }
-
-
-
+  
 </style>
