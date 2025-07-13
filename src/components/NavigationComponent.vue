@@ -14,6 +14,7 @@
         <li :class="{ 'active': activeTab === 'about' }" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
         <li :class="{ 'active': activeTab === 'portfolio' }" class="anch"><a href="#portfolio"  @click.prevent="scrollTo('#portfolio')">Portfolio</a></li>
         <li :class="{ 'active': activeTab === 'skills' }" class="anch"><a href="#skills"  @click.prevent="scrollTo('#skills')">Skills</a></li>
+        <li :class="{ 'active': activeTab === 'services' }" class="anch"><a href="#services"  @click.prevent="scrollTo('#services')">Services</a></li>
         <li :class="{ 'active': activeTab === 'contact' }" class="anch"><a href="#contact" @click.prevent="scrollTo('#contact')">Contact</a></li>
     </ul>
     <ul class="nav-link">
@@ -364,7 +365,7 @@ export default {
       padding: 0;
       gap: 20px;
       justify-content: space-between;
-      max-width: 700px;
+      max-width: 800px;
     }
 
    .nav-items li{

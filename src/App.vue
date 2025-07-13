@@ -3,6 +3,7 @@
   <About/>
   <Port/>
   <Skills/>
+  <Services/>
   <Cont/>
 </template>
 
@@ -13,6 +14,7 @@ import About from "./components/AboutComponent.vue";
 // import Exp from "./components/ExpComponent.vue";
 // import Edu from "./components/EducationComponent.vue";
 import Skills from "./components/SkillsComponent.vue";
+import Services from "./components/ServicesComponent.vue";
 import Port from "./components/PortComponent.vue";
 import Cont from "./components/ContactComponent.vue";
 
@@ -24,6 +26,7 @@ export default {
     Port,
     Cont,
     Skills,
+    Services,
     }
 }
 </script>
