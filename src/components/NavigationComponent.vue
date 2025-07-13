@@ -347,6 +347,7 @@ export default {
 
     .nav-container {
       width: 100%;
+      padding-top: 0;
       display: flex;
       justify-content: space-between;
       transition: background-color 0.5s;
@@ -363,6 +364,7 @@ export default {
       padding: 0;
       gap: 20px;
       justify-content: space-between;
+      max-width: 700px;
     }
 
    .nav-items li{
@@ -385,6 +387,10 @@ export default {
 
     .anch{
       min-width: unset;
+    }
+
+    .anch:not(.active.anch){
+      border-bottom: unset;
     }
 
     .def-home-link{
