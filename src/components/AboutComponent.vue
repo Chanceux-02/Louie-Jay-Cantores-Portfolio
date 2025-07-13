@@ -1,5 +1,5 @@
 <template>
-<div class="about-container" id="about">
+<section class="about-container" id="about">
 
   <div class="about-image-container">
     <img :src="myPic" alt="Louie Jay Cantores Picture" class="about-image" data-aos="zoom-in" />
@@ -18,7 +18,7 @@
     </p>
   </div>
 
-</div>
+</section>
 
 
 
@@ -48,7 +48,6 @@
 }
 
 .about-image-container{
-    background-color: rgb(25,25,25,0.8);
     position: relative;
     display: none;
 }

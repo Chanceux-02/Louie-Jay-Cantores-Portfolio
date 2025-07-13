@@ -1,6 +1,6 @@
 <template>
   <Nav class="nav"/>
-  <div class="header-container" id="home">
+  <section class="header-container" id="home">
 
     <div class="dim">
 
@@ -26,7 +26,7 @@
 
     </div>
 
-  </div>
+  </section>
 </template>
 
 <script>

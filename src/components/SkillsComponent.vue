@@ -1,6 +1,6 @@
 <template>
 
-    <div class="skills-container" id="skills">
+    <section class="skills-container" id="skills">
 
         <p class="title" data-aos="zoom-in-down">Skills</p>
 
@@ -21,7 +21,7 @@
           </div>
         </section>
 
-    </div>
+    </section>
 
 </template>
 

@@ -1,10 +1,8 @@
 <template>
   <Header/>
   <About/>
-  <Exp/>
-  <Edu/>
-  <Skills/>
   <Port/>
+  <Skills/>
   <Cont/>
 </template>
 
@@ -12,7 +10,7 @@
 
 import Header from "./components/HeaderComponent.vue";
 import About from "./components/AboutComponent.vue";
-import Exp from "./components/ExpComponent.vue";
+// import Exp from "./components/ExpComponent.vue";
 // import Edu from "./components/EducationComponent.vue";
 import Skills from "./components/SkillsComponent.vue";
 import Port from "./components/PortComponent.vue";
@@ -23,7 +21,6 @@ export default {
   components: { 
     Header,
     About,
-    Exp,
     Port,
     Cont,
     Skills,

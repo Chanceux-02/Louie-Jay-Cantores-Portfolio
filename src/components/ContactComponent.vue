@@ -1,6 +1,6 @@
 <template>
 
-<div class="container" id="contact">
+<section class="container" id="contact">
 
   <p class="title" data-aos="zoom-in-down">Contact</p>
 
@@ -17,7 +17,7 @@
       </section>
   </section>
 
-</div>
+</section>
 
 </template>
 

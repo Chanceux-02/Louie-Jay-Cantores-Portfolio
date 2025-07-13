@@ -1,6 +1,6 @@
 <template>
 
-    <div class="portfolio-container" id="portfolio">
+    <section class="portfolio-container" id="portfolio">
 
         <p class="title" data-aos="zoom-in-down">Portfolio</p>
 
@@ -24,7 +24,7 @@
 
         </div>
 
-    </div>
+    </section>
 </template>
 
 <script>

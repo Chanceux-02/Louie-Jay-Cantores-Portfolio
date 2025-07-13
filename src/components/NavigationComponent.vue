@@ -8,10 +8,8 @@
         <p  v-if="windowWidth > 925" class="type-text"> {{ typedText }} </p>
         <li :class="{ 'active': activeTab === 'home' }" class="anch"><a href="#home" @click.prevent="scrollTo('#home')">Home</a></li>
         <li :class="{ 'active': activeTab === 'about' }" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
-        <li :class="{ 'active': activeTab === 'experience' }" class="anch"><a href="#experience"  @click.prevent="scrollTo('#experience')">Experience</a></li>
-        <li :class="{ 'active': activeTab === 'education' }" class="anch"><a href="#education"  @click.prevent="scrollTo('#education')">Education</a></li>
-        <li :class="{ 'active': activeTab === 'skills' }" class="anch"><a href="#skills"  @click.prevent="scrollTo('#skills')">Skills</a></li>
         <li :class="{ 'active': activeTab === 'portfolio' }" class="anch"><a href="#portfolio"  @click.prevent="scrollTo('#portfolio')">Portfolio</a></li>
+        <li :class="{ 'active': activeTab === 'skills' }" class="anch"><a href="#skills"  @click.prevent="scrollTo('#skills')">Skills</a></li>
         <li :class="{ 'active': activeTab === 'contact' }" class="anch"><a href="#contact" @click.prevent="scrollTo('#contact')">Contact</a></li>
     </ul>
     <ul class="nav-link">
@@ -50,22 +48,6 @@ export default {
         scrollNav.value.backgroundColor = '';
       }
 
-      if(scrollPosition >= 9000){
-        activeTab.value = 'contact';
-      }else if(scrollPosition >= 5600){
-        activeTab.value = 'portfolio';
-      }else if(scrollPosition >= 3900){
-        activeTab.value = 'skills';
-      }else if(scrollPosition >= 3200){
-        activeTab.value = 'education';
-      }else if(scrollPosition >= 1600){
-        activeTab.value = 'experience';
-      }else if(scrollPosition >= 700) {
-        activeTab.value = 'about';
-      }else{
-        activeTab.value = 'home';
-      }
-
     };
 
     const windowWidth = ref(window.innerWidth);
@@ -88,17 +70,45 @@ export default {
 
     };
 
+    // **scroll nav animation border bottom
+
+    let observer
 
     onMounted(() => {
       window.addEventListener('scroll', handleScroll);
       window.addEventListener('resize', updateWindowWidth);
       window.addEventListener('load', updateWindowWidth);
+
+     const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              if (entry.target.id) {
+                activeTab.value = entry.target.id;
+              }
+            }
+          });
+        },
+        {
+          root: null,
+          threshold: 0,
+          rootMargin: `-50% 0px -50% 0px`,
+        }
+      );
+
+      const sections = document.querySelectorAll('section')
+      sections.forEach(section => observer.observe(section))
+
     });
 
     onUnmounted(() => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', updateWindowWidth);
       window.removeEventListener('load', updateWindowWidth);
+
+      if (observer) {
+        observer.disconnect()
+      }
     });
 
 
