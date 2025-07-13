@@ -3,17 +3,17 @@ const skills = [
     {
         id: 1,
         skill: 'Shopify',
-        image: require('@/assets/skillsImage/html-5.png'),
+        image: require('@/assets/skillsImage/shopify-logo.png'),
     },
     {
         id: 12,
         skill: 'Shopify admin',
-        image: require('@/assets/skillsImage/html-5.png'),
+        image: require('@/assets/skillsImage/shopify-admin.png'),
     },
     {
         id: 13,
         skill: 'Liquid',
-        image: require('@/assets/skillsImage/html-5.png'),
+        image: require('@/assets/skillsImage/shopify-liquid.png'),
     },
     {
         id: 14,

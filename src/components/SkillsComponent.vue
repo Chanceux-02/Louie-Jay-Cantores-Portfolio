@@ -49,22 +49,18 @@ export default {
 <style scoped>
 
     .skills-container{
-        padding: 8% 15% 8% 15%;
+        padding: 15% 0;
         height: auto;
-        min-height: 60vh;
         background-color: #101010;
         background-size: cover;
         background-position: center;
         margin: auto;
     }
+    
     .card {
         color: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-        width: 150px;
-        max-width: 800px;
-        height: 100%;
-        margin: 2% 1%;
         transition: transform 0.3s ease;
     }
 
@@ -72,7 +68,6 @@ export default {
         transform: scale(1.03);
     }
 
-    /* Placeholder image */
     .card img {
         width: 100%;
         height: auto;
@@ -81,7 +76,7 @@ export default {
 
     .card-content{
         background-color: rgb(25, 25, 25, 0.8);
-        padding: 20px;
+        padding: 20px 0;
         margin: 0px;
         border-radius: 10px;
         text-align: center;
@@ -91,20 +86,23 @@ export default {
         justify-content: space-between;
 
     }
+
     .card-content:hover{
         background-color: rgba(39, 12, 12, 0.9);
-
     }
+
     .card-container{
-        display: flex;
-        justify-content: space-evenly;
         margin-top: 5%;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
     }
 
     .proj-title{
         color: red;
-        font-size: 1.5rem !important;
+        font-size: 1.5rem;
         font-weight: 900;
         text-shadow: 
             -0.5px -0.5px 0 white,  
@@ -112,89 +110,60 @@ export default {
             -0.5px  0.5px 0 white,
             0.5px  0.5px 0 white;
     }
+
     .tech-stack{
         font-size: 1.5rem;
         font-weight: 900;
     }
+
     .main-skills{
         margin: auto;
         margin-top: 5%;
         max-width: 860px;
-        width: 90%;
-    }
-    .other-skills{
-        margin: auto;
-        margin-top: 10%;
-        max-width: 860px;
-        width: 90%;
+        width: 85%;
     }
 
-    @media (max-width: 1024px) {
+    @media (min-width: 768px) {
         .skills-container{
-            padding: 8% 0%;;
+            padding: 15% 0;
         }
-        .card {
-            margin: 4% 1%;
-            width: 120px;
-            height: 100%;
-        }
-        .proj-title{
-            color: red;
-            font-size: 1rem !important;
-            font-weight: 900;
-            text-shadow: 
-                -0.5px -0.5px 0 rgb(165, 164, 164),  
-                0.5px -0.5px 0 rgb(165, 164, 164),
-                -0.5px  0.5px 0 rgb(165, 164, 164),
-                0.5px  0.5px 0 white;
-        }
-        .tech-stack{
-            font-size: 1rem;
-            font-weight: 900;
-        }
-         .main-skills{
-            width: 70%;
-        }
-        .other-skills{
-            width: 70%;
+        .card-container{
+            grid-template-columns: repeat(4, 1fr);
         }
     }
-    @media (max-width: 1590px) {
-         .card {
-            margin: 4% 1%;
-        }
-    }
-    @media (max-width: 425px) {
-        .card {
-            margin: 3% 1%;
-            width: 50px;
-            height: 50px;
-        }
-        .proj-title{
-            color: red;
-            font-size: 0.5rem !important;
-            font-weight: 100;
-            text-shadow: 
-                -0.5px -0.5px 0 rgb(84, 83, 83),  
-                0.5px -0.5px 0 rgb(84, 83, 83),
-                -0.5px  0.5px 0 rgb(84, 83, 83),
-                0.5px  0.5px 0 rgb(84, 83, 83);
-        }
-        .tech-stack{
-            font-size: rem;
-            font-weight: 900;
+
+    @media (min-width: 1024px) {
+        .main-skills{
+            width: 90%;
+            max-width: unset;
         }
         .card-content{
-            padding: 5px;
-            margin: 0px;
-            border-radius: 10px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 40px;
+            height: 10rem;
         }
+    }
 
+    @media (min-width: 1280px) {
+        .card-content{
+            height: 14rem;
+        }
+        .card-content .proj-title{
+            font-size: 2rem;
+        }
+    }
+
+    @media (min-width: 1900px) {
+        .card-container{
+            gap: 5rem;
+        }
+        .card-content{
+            height: 400px;
+        }
+        .card-content .proj-title{
+            font-size: 3rem;
+        }
+        .title{
+            font-size: 4rem;
+        }
     }
 
 </style>
