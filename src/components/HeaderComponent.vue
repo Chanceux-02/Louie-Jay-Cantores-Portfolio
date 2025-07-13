@@ -4,12 +4,18 @@
 
     <div class="dim">
 
-      <div class="intro">
+      <div class="heading-container">
 
-        <h1 data-aos="zoom-in-down">Freelance Shopify Developer</h1>
+        <h1 class="heading-title" data-aos="zoom-in-down">Freelance Shopify Developer</h1>
         
-        <!-- <p class="text" data-aos="fade-right">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span>Welcome to my world.</span></p> -->
-        <p class="text" data-aos="fade-right">Hello, <br> I'm <span class="name">Louie Jay Cantores</span> <br> <span class="other-info">I make Shopify stores shine.</span></p>
+        <p class="heading-text" data-aos="fade-right">
+          Hello,  
+          <span>
+            I'm
+            <span class="header-name">Louie Jay Cantores</span> 
+          </span>
+          <span class="header-other-info">I make Shopify stores shine.</span>
+        </p>
 
       </div>
 
@@ -40,95 +46,102 @@ export default {
     position: fixed;
     width: 100%;
   }
+
   .header-container{
-    min-height: 88vh;
-    max-height: 900px;
     background-image: url('@/assets/myPic/mypic1.jpg');
     background-repeat: no-repeat;
     background-size: cover;  
+    background-position: right;
+    height: 60vh;
+    max-height: 500px;
   }
+  
   .dim{
     padding: 9% 0 0 0;
     background-color: rgb(5 5 5 / 81%);
-    min-height: 88vh;
-    max-height: 900px;
-  }
-  .intro{
-    width: 50%;
-    text-align: start;
-    padding: 5% 0 0 10%;
+    height: 100%;
   }
 
-  .intro p {
+  .heading-container{
+    width: 80%;
+    text-align: start;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading-text {
     color: white;
     font-weight: 900;
-    font-size: 4em;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
   }
-  h1{
-    color: white;
 
+  .heading-title{
+    color: white;
+    font-size: 1rem;
   }
-  .name{
+
+  .header-name{
     color: #F9004D;
   }
 
-  .text {
-    line-height: 1.5; /* Adjust the value as needed */
-  }
-   .nav-link{
-      visibility: hidden;
+  .heading-text {
+    line-height: 1.5;
+    font-size: 1.5rem;
   }
 
-  .text .other-info{
-    font-size: 2rem !important;
+  .nav-link{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    visibility: visible;
+    padding: 0;
+    gap: 15px;
   }
 
-  @media (max-width: 1000px) {
-    .intro{
-      width: 70%;
-    }
-    .intro p{
-        font-size: 2.5rem;
-    }
-    h1{
-        font-size: 1.5rem !important;
-    }
+  .nav-link li{
+    list-style: none;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .header-container{
-        min-height: 0vh;
-        height: 60vh;
+      height: 70vh;
+      max-height: 700px;
     }
-
   }
-  @media (max-width: 425px) {
-    .header-container, .dim{
-      max-height: 450px;
-    }
-    .intro{
-      width: 90%;
-      margin-top: 20%;
 
-    }
-    .intro p{
-        font-size: 1.5rem;
-    }
-    h1, .text .other-info{
-        font-size: 1rem !important;
-    }
+  @media (min-width: 1024px) {
 
+    .header-container{
+      height: 100vh;
+      max-height: unset;
+    }
+    
     .nav-link{
-      display: flex;
-      justify-content: space-between;
-      width: 30%;
-      visibility: visible;
-    }
-    .nav-link li{
-      width: 100%;
-      list-style: none;
+      visibility: hidden;
     }
 
+    .heading-title{
+      font-size: 1.5rem;
+    }
+
+    .heading-text {
+      font-size: 3em;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .heading-title{
+      font-size: 2rem;
+    }
+
+    .heading-text {
+      font-size: 4em;
+    }
   }
 
 
