@@ -1,26 +1,19 @@
 <template>
 
-    <section class="skills-container" id="skills">
+    <section class="skills-container-main" id="skills">
 
-        <p class="title" data-aos="zoom-in-down">Skills</p>
+        <h2 class="title" data-aos="zoom-in-down">Skills</h2>
 
-        <section class="main-skills">
-          
-          <div class="card-container">
-
-              <!-- looping throug datas -->
-
-              <CardComponent v-for="skill in skills" :key="skill.id" :backgroundImage="skill.image" data-aos="flip-up">
-                  <div class="card-content">
-                      <section>
-                          <p class="proj-title">{{skill.skill}}</p>
-                          <div class="overlay"></div>
-                      </section>
-                  </div>
-              </CardComponent>
-
-          </div>
-        </section>
+        <div class="skills-container">
+            <div class="skill-card" v-for="skill in skills" :key="skill.id" data-aos="flip-up">
+                <section class="skill-content">
+                    <div class="skill-overlay"></div>
+                    <img class="skill-image" :src="skill.image" :alt="skill.skill" />
+                    <h3 class="skill-title">{{skill.skill}}</h3>
+                    <p class="skill-description">{{skill.description}}</p>
+                </section>
+            </div>
+        </div>
 
     </section>
 
@@ -28,14 +21,14 @@
 
 <script>
 
-import CardComponent from './child/CardComponent.vue';
+// import CardComponent from './child/CardComponent.vue';
 import {skills, techStack} from '../datas/cardsSkillsData';
 
 
 export default {
 
     components: {
-        CardComponent,
+        // CardComponent,
     },
     data() {
         return {
@@ -49,52 +42,6 @@ export default {
 
 <style scoped>
 
-    .skills-container{
-        padding: 15% 0;
-        height: auto;
-        background-color: #101010;
-        background-size: cover;
-        background-position: center;
-        margin: auto;
-    }
-    
-    .card {
-        position: relative;
-        color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease;
-        min-height: 150px;
-    }
-
-    .card:hover{
-        transform: scale(1.03);
-    }
-
-    .card img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-    }
-
-    .card-content{
-        border-radius: 10px;
-        height: auto;
-    }
-
-    .card:hover{
-        background-color: rgba(39, 12, 12, 0.9);
-    }
-
-    .card-container{
-        margin-top: 5%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        align-items: stretch;
-        gap: 2rem;
-    }
-
     .overlay::after {
         content: '';
         position: absolute;
@@ -103,76 +50,93 @@ export default {
         z-index: 1;
     }
 
-    .proj-title{
-        position: relative;
-        z-index: 2;
-        color: red;
-        font-size: 1.5rem;
-        font-weight: 900;
-        text-shadow: 
-            -0.5px -0.5px 0 white,  
-            0.5px -0.5px 0 white,
-            -0.5px  0.5px 0 white,
-            0.5px  0.5px 0 white;
-    }
-
-    .tech-stack{
-        font-size: 1.5rem;
-        font-weight: 900;
-    }
-
-    .main-skills{
+    .skills-container{
+        width: 90%;
         margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
         margin-top: 5%;
-        max-width: 860px;
-        width: 85%;
+    }
+
+    .skill-card{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #3a1316;
+        border-radius: 10px;
+        padding: 20px 10px 10px 10px;
+        background-color: #282937;
+    }
+
+    .skill-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill-image{
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .skill-title{
+        color: #cc1313;
+        font-weight: 800;
+        font-size: 1rem;
+    }
+
+    .skill-description{
+       color: white;
+       font-size: 0.8rem;
     }
 
     @media (min-width: 768px) {
         .skills-container{
-            padding: 15% 0;
-        }
-        .card-container{
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
     @media (min-width: 1024px) {
-        .main-skills{
-            width: 90%;
-            max-width: unset;
-        }
-        .card-content{
-            height: 10rem;
+        .skills-container{
+            max-width: 2000px;
+            grid-template-columns: repeat(5, 1fr);
         }
     }
 
     @media (min-width: 1280px) {
-        .card-content{
-            height: 14rem;
+
+        .skills-container{
+            gap: 40px;
+            grid-template-columns: repeat(5, 1fr);
         }
-        .card-content .proj-title{
-            font-size: 2rem;
+
+        .skill-card{
+            padding: 30px;
         }
-        .card-container{
-            max-width: 1800px;
-            margin: auto;
+
+        .skill-content{
+            align-items: start;
+        }
+
+        .skill-title{
+            font-size: 1.5rem;
+            text-align: start;
+            margin-top: 40px;
+            margin-bottom: 0px;
+        }
+
+        .skill-description{
+            font-size: 1rem;
+            text-align: start;
+            margin-top: 10px;
         }
     }
 
     @media (min-width: 1900px) {
-        .card-container{
-            gap: 5rem;
-        }
-        .card-content{
-            height: 400px;
-        }
-        .card-content .proj-title{
-            font-size: 3rem;
-        }
-        .title{
-            font-size: 4rem;
-        }
+
     }
 
 </style>
