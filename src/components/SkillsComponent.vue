@@ -104,6 +104,11 @@ export default {
             max-width: 2000px;
             grid-template-columns: repeat(5, 1fr);
         }
+        .skill-card{
+            padding-bottom: 0;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
     }
 
     @media (min-width: 1280px) {
@@ -112,11 +117,10 @@ export default {
             gap: 40px;
             grid-template-columns: repeat(5, 1fr);
         }
-
         .skill-card{
-            padding: 30px;
+            padding: 20px;
+            padding-bottom: 0;
         }
-
         .skill-content{
             align-items: start;
         }
@@ -135,8 +139,16 @@ export default {
         }
     }
 
-    @media (min-width: 1900px) {
+    @media (min-width: 1440px) {
+        .skill-card{
+            padding: 20px 30px;
+        }
+    }
 
+    @media (min-width: 1700px) {
+        .skill-card{
+            padding: 30px;
+        }
     }
 
 </style>
