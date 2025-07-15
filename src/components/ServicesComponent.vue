@@ -102,7 +102,7 @@ export default {
     .card-container{
         margin-top: 5%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         justify-content: center;
         align-items: center;
         gap: 1rem;
@@ -162,10 +162,19 @@ export default {
         }
         .card-content{
             height: auto;
+            padding: 15px;
         }
 
         .card-container{
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .proj-title{
+            text-align: start;
+        }
+
+        .service-desc{
+        text-align: start;
         }
     }
 
