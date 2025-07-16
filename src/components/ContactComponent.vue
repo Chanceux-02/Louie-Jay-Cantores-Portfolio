@@ -6,8 +6,8 @@
 
   <section class="footer">
       <br>
-      <div class="opacity-50 lh-1"><i class="fa-solid fa-phone fa-2x" aria-hidden="true"></i></div>
-      <p class=" lh-1 contact"  @click="copyText('0909-151-3512')" data-aos="zoom-in">0909-151-3512</p>
+      <!-- <div class="opacity-50 lh-1"><i class="fa-solid fa-phone fa-2x" aria-hidden="true"></i></div>
+      <p class=" lh-1 contact"  @click="copyText('0909-151-3512')" data-aos="zoom-in">0909-151-3512</p> -->
       <div class="opacity-50 lh-1"><i class="fa-solid fa-envelope fa-2x" aria-hidden="true"></i></div>
       <p class=" lh-1 contact"  @click="copyText('louiejaycantores@gmail.com')" data-aos="zoom-in">louiejaycantores@gmail.com</p>
       <br>
