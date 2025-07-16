@@ -50,13 +50,17 @@ export default {
         z-index: 1;
     }
 
+    .skills-container-main{
+        padding: 40px 0;
+    }
+
     .skills-container{
         width: 90%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
-        margin-top: 5%;
+        margin-top: 10%;
     }
 
     .skill-card{
@@ -97,17 +101,26 @@ export default {
         .skills-container{
             grid-template-columns: repeat(3, 1fr);
         }
+
+        .skills-container-main{
+            padding: 50px 0;
+        }
     }
 
     @media (min-width: 1024px) {
         .skills-container{
             max-width: 2000px;
             grid-template-columns: repeat(5, 1fr);
+            margin-top: 5%;
         }
         .skill-card{
             padding-bottom: 0;
             padding-left: 5px;
             padding-right: 5px;
+        }
+
+        .skills-container-main{
+            padding: 80px 0;
         }
     }
 

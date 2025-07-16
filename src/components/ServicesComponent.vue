@@ -2,25 +2,21 @@
 
     <section class="services-container" id="services">
 
-        <p class="title" data-aos="zoom-in-down">Services</p>
-
-        <section class="main-services">
+        <h2 class="title" data-aos="zoom-in-down">Services</h2>
           
-          <div class="card-container">
+        <div class="services-card-container">
 
-              <CardComponent v-for="service in services" :key="service.id" :backgroundImage="service.image" data-aos="flip-up">
-                  <div class="card-content">
-                      <section>
-                          <p class="proj-title">{{service.service}}</p>
-                          <p class="service-desc">{{service.description}}</p>
-                          <div class="overlay"></div>
-                      </section>
-                  </div>
-              </CardComponent>
+            <CardComponent v-for="service in services" :key="service.id" :backgroundImage="service.image" data-aos="flip-up">
+                <div class="card-content">
+                    <section>
+                        <h3 class="service-title">{{service.service}}</h3>
+                        <p class="service-desc">{{service.description}}</p>
+                        <div class="overlay"></div>
+                    </section>
+                </div>
+            </CardComponent>
 
-          </div>
-        </section>
-
+        </div>
     </section>
 
 </template>
@@ -49,12 +45,25 @@ export default {
 <style scoped>
 
     .services-container{
-        padding: 15% 0;
+        padding: 40px 0;
         height: auto;
         background-color: #191919;
         background-size: cover;
         background-position: center;
         margin: auto;
+    }
+
+    .services-card-container{
+        margin: auto;
+        margin-top: 10%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        align-items: stretch;
+        width: 90%;
+        max-width: 2000px;
     }
     
     .card {
@@ -63,9 +72,8 @@ export default {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
         transition: transform 0.3s ease;
         position: relative;
-        overflow: hidden; 
         background-position: center;
-        min-height: 150px;
+        padding: 20px 10px 10px;
     }
 
     .overlay::after {
@@ -99,82 +107,57 @@ export default {
         background-color: rgba(39, 12, 12, 0.9);
     }
 
-    .card-container{
-        margin-top: 5%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        align-items: stretch;
-    }
-
-    .proj-title{
+    .service-title{
         position: relative;
         color: red;
         font-size: 1rem;
         font-weight: 900;
-        text-shadow: 
+        /* text-shadow: 
             -0.5px -0.5px 0 white,  
             0.5px -0.5px 0 white,
             -0.5px  0.5px 0 white,
-            0.5px  0.5px 0 white;
-        z-index: 2;
+            0.5px  0.5px 0 white; */
     }
 
     .service-desc{
         position: relative;
-        z-index: 2;
         text-align: center;
         padding: 0 5px;
         font-size: 0.9rem;
     }
 
-    .tech-stack{
-        font-size: 1.5rem;
-        font-weight: 900;
-    }
-
-    .main-services{
-        margin: auto;
-        margin-top: 5%;
-        max-width: 860px;
-        width: 85%;
-    }
-
     @media (min-width: 768px) {
         .services-container{
-            padding: 15% 0;
-        }
-        .card-container{
-            grid-template-columns: repeat(2, 1fr);
+            padding: 50px 0;
         }
 
-        .service-desc{
-            padding: 0 10px;
+        .services-card-container{
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 5%;
         }
+
     }
 
     @media (min-width: 1024px) {
-        .main-services{
-            width: 90%;
-            max-width: unset;
-        }
         .card-content{
             height: auto;
             padding: 15px;
         }
 
-        .card-container{
+        .services-card-container{
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
         }
-        .proj-title{
+        .service-title{
             text-align: start;
         }
 
         .service-desc{
-        text-align: start;
+            text-align: start;
+        }
+
+        .services-container{
+            padding: 50px 0;
         }
     }
 
@@ -182,27 +165,23 @@ export default {
         .card-content{
             height: auto;
         }
-        .card-content .proj-title{
-            font-size: 2rem;
+        .card-content .service-title{
+            font-size: 1.5rem;
         }
         .service-desc{
             font-size: 1rem;
         }
-        .card-container{
-            max-width: 1800px;
-            margin: auto;
-        }
     }
 
     @media (min-width: 1900px) {
-        .card-container{
+        .services-card-container{
             gap: 5rem;
         }
         .card-content{
             height: auto;
         }
-        .card-content .proj-title{
-            font-size: 3rem;
+        .card-content .service-title{
+            font-size: 2rem;
         }
         .title{
             font-size: 4rem;

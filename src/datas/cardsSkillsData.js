@@ -49,7 +49,7 @@ const skills = [
     },
     {
         id: 9,
-        skill: '3rd Party App Integration',
+        skill: 'App Integration',
         image: require('@/assets/skillsImage/git.svg'),
         description: 'Integrating third-party apps and services to extend store functionality.'
     },
