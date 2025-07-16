@@ -6,16 +6,16 @@
 
       <div class="heading-container">
 
-        <h1 class="heading-title" data-aos="zoom-in-down">Freelance Shopify Developer</h1>
-        
-        <p class="heading-text" data-aos="fade-right">
-          Hello,  
+        <h1 class="heading-text" data-aos="fade-right">
+          <span class="heading-title" data-aos="zoom-in-down">Freelance Shopify Developer</span>
+          <span> Hello,  </span>
           <span>
             I'm
             <span class="header-name">Louie Jay Cantores</span> 
           </span>
-          <span class="header-other-info">I make Shopify stores shine.</span>
-        </p>
+        </h1>
+
+        <h2 class="header-other-info" data-aos="fade-right" >I make Shopify stores shine.</h2>
 
       </div>
 
@@ -81,15 +81,20 @@ export default {
   .heading-title{
     color: white;
     font-size: 1rem;
+    margin-bottom: 0.83em;
   }
 
   .header-name{
     color: #F9004D;
   }
 
-  .heading-text {
+  .heading-text, .header-other-info {
     line-height: 1.5;
     font-size: 1.5rem;
+  }
+
+  .header-other-info{
+    color: white;
   }
 
   .nav-link{
@@ -129,7 +134,7 @@ export default {
       font-size: 1.5rem;
     }
 
-    .heading-text {
+    .heading-text, .header-other-info {
       font-size: 3em;
     }
   }
@@ -139,7 +144,7 @@ export default {
       font-size: 2rem;
     }
 
-    .heading-text {
+    .heading-text, .header-other-info {
       font-size: 4em;
     }
   }

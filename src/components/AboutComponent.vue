@@ -6,7 +6,7 @@
   </div>
 
   <div class="about-text">
-    <p class="title" data-aos="zoom-in-down"><span style="color: #F9004D;">About</span> Me</p>
+    <h2 class="title" data-aos="zoom-in-down"><span style="color: #F9004D;">About</span> Me</h2>
     <p class="about-desc" data-aos="zoom-in">
       Freelance Shopify developer passionate about crafting seamless e-commerce experiences using Liquid, JavaScript, HTML, and CSS. 
       <span class="about-desc-extend-text">
