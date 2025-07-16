@@ -109,7 +109,7 @@ export default {
 
     .service-title{
         position: relative;
-        color: red;
+        color: #F9004D;
         font-size: 1rem;
         font-weight: 900;
         /* text-shadow: 
@@ -180,15 +180,18 @@ export default {
         .card-content{
             height: auto;
         }
-        .card-content .service-title{
-            font-size: 2rem;
-        }
+
         .title{
             font-size: 4rem;
         }
+
+        /* .card-content .service-title{
+            font-size: 2rem;
+        }
+
         .service-desc{
             font-size: 1.5rem;
-        }
+        } */
     }
 
 </style>

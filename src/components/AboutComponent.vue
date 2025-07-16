@@ -36,7 +36,7 @@
   background-image: url('@/assets/aboutBG.svg');
   background-size: cover;
   background-position: center;
-  padding: 15% 0;
+  padding: 40px 0;
 }
 
 .about-text{
@@ -78,7 +78,7 @@
   }
 
   .about-container{
-    padding: 5% 10%;
+    padding: 80px 10%;
     gap: 50px;
   }
 
@@ -101,6 +101,7 @@
   .about-desc{
     text-align: left;
   }
+  
 
 }
 

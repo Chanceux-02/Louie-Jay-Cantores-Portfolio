@@ -2,23 +2,29 @@
 
     <section class="portfolio-container" id="portfolio">
 
-        <p class="title" data-aos="zoom-in-down">Portfolio</p>
+        <h2 class="title" data-aos="zoom-in-down">Portfolio</h2>
 
         <div class="card-container">
 
-            <!-- looping throug datas -->
-
-            <CardComponent v-for="card in cards" :key="card.id" :backgroundImage="card.image" data-aos="zoom-in-up">
+            <CardComponent v-for="data in datas" :key="data.id" :backgroundImage="data.image" data-aos="zoom-in-up">
                 <div class="card-content">
                     <section>
-                        <p class="proj-title">{{card.title}}</p>
-                        <p>{{card.desc}}</p>
+                        <h3 class="proj-title">{{data.title}}</h3>
+                        <p class="proj-desc">{{data.desc}}</p>
                     </section>
-                    <h3>Development Technologies</h3>
-                    <section class="tech">
-                        <a v-for="tech in card.tech" :key="tech">{{ tech }}</a>
+                    <section class="datas-container">
+                            <h4 class="task-heading">Task and Activities:</h4>
+                        <ul class="tasks">
+                            <li class="task-item" v-for="task in data.tasks" :key="task">{{ task }}</li>
+                        </ul>
+                            <h4 class="tech-heading">Development Technologies:</h4>
+                        <ul class="tech">
+                            <li class="tech-item" v-for="tech in data.tech" :key="tech">{{ tech }}</li>
+                        </ul>
                     </section>
-                    <a :href="card.link" target="_blank" class="btn btn-outline-light">View Codes</a>
+                    <section class="link-container">
+                        <a :href="data.link" target="_blank" class="redirection-link btn btn-outline-light">Visit Store</a>
+                    </section>
                 </div>
             </CardComponent>
 
@@ -30,7 +36,7 @@
 <script>
 
 import CardComponent from './child/CardComponent.vue';
-import Cards from '../datas/cardsData';
+import Datas from '../datas/portfolioData';
 
 
 export default {
@@ -39,7 +45,7 @@ export default {
     },
     data() {
         return {
-            cards: Cards    
+            datas: Datas    
         };
     }
 }
@@ -47,151 +53,179 @@ export default {
 
 <style scoped>
 
-        .portfolio-container{
-            padding: 8% 5%;
-            height: auto;
-            min-height: 90vh;
-            background-color: #191919;
-            background-size: cover;
-            background-position: center;
+    .portfolio-container{
+        padding: 40px 0;
+        height: auto;
+        min-height: 90vh;
+        background-color: #191919;
+        background-size: cover;
+        background-position: center;
+        width: 90%;
+        max-width: 2000px;
+        margin: auto;
+    }
+    
+    .card {
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        margin: 1% 0%;
+        transition: transform 0.3s ease;
+        padding: 0;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .card-content{
+        background-color: rgb(16 16 16 / 90%);
+        margin: 0px;
+        padding: 0 20px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        border: 2px solid #00000078;
+        height: 100%;
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        margin-top: 5%;
+        gap: 15px;
+    }
+
+    a{
+        text-decoration: none;
+        color: rgba(198, 201, 216, .75);;
+        border: 1px solid white;
+        padding: 1% 3%;
+        border-radius: 5px;
+        width: 40%;
+        margin: 0% auto;
+        cursor: pointer;
+        font-size: 0.9em;
+    }
+
+    a:hover{
+        text-decoration: none;
+        color: #F9004D;
+        border: 1px solid #F9004D;
+        padding: 1% 3%;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .datas-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 5%;
+    }
+    
+    .tech-heading, .task-heading{
+        margin: 0;
+        text-align: start;
+        font-size: 1em;
+    }
+
+    .tasks{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        padding-left: 20px;
+    }
+
+    .tech{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        padding-left: 20px;
+    }
+
+    .tech-item, .task-item{
+        font-size: 0.9em;
+        color: #b9b9b9;
+    }
+
+    .proj-title{
+        color: #F9004D;
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    .proj-desc{
+        font-size: 1rem;
+        color: #ffffff;
+        text-align: justify;
+    }
+
+    .link-container{
+        width: 100%;
+        padding: 8% 0 10% 0;
+    }
+
+    .redirection-link{
+        font-size: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .card-container{
+            grid-template-columns: repeat(2, 1fr); 
         }
-        .card {
-            color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-            width: 500px;
-            max-width: 800px;
-            height: 600px;
-            margin: 1% 0%;
-            transition: transform 0.3s ease;
+    }
+
+    @media (min-width: 1024px) {
+        .card-content:hover{
+            background-color: rgb(16, 16, 16, 1)
         }
 
         .card:hover{
             transform: scale(1.04);
         }
 
-        /* Placeholder image */
-        .card img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        /* Text labels */
-        .card p {
-            font-size: 14px;
-            color: rgba(198, 201, 216, .75);
+        .portfolio-container{
+            padding: 80px 0;
         }
 
         .card-content{
-            background-color: rgb(16 16 16 / 95%);
-            height: 93.5%;
-            padding: 20px;
-            margin: 0px;
-            border-radius: 10px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: 2px solid #00000078;
+            padding: 0 50px;
         }
-        .card-content:hover{
-            background-color: rgb(16, 16, 16, 1)
+    }
 
+    @media (min-width: 1440px) {
+        .tech-item, .task-item{
+            font-size: 1em;
         }
+
         .card-container{
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 5%;
-            flex-wrap: wrap;
+            gap: 30px;
         }
-        a{
-            text-decoration: none;
-            color: rgba(198, 201, 216, .75);;
-            border: 1px solid white;
-            padding: 1% 3%;
-            border-radius: 5px;
-            width: 40%;
-            margin: 0% auto;
-            cursor: pointer;
-        }
-        a:hover{
-            text-decoration: none;
-            color: #F9004D;
-            border: 1px solid #F9004D;
-            padding: 1% 3%;
-            border-radius: 5px;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .tech{
-            display: flex;
-            margin: 5%;
-            margin-top: 0px;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .tech a{
-            width: 25%;
-        }
-        .proj-title{
-            color: red;
-            font-size: 2rem !important;
-            font-weight: 900;
-            text-shadow: 
-                -0.5px -0.5px 0 white,  
-                0.5px -0.5px 0 white,
-                -0.5px  0.5px 0 white,
-                0.5px  0.5px 0 white;
-        }
+    }
 
-        @media (max-width: 1111px) {
-            .card {
-                width: 800px;
-                max-width: 800px;
-                height: 400px;
-                margin: 2% 0%;
-            }
-            .card-content{
-                padding: 20px 15%;
-
-            }
-            .card p{
-                font-size: 0.8rem;
-            }
-            .proj-title{
-                font-size: 1.5rem !important;
-            }
-            a {
-                width: 20%;
-                font-size: 0.7rem;
-            }
-            .tech a{
-                width: 15%;
-                margin-top: 3%;
-                font-size: 0.7rem;
-            }
-            .tech{
-                width: 70%;
-                margin: 0% auto;
-            }
+    /* @media (min-width: 2400px) {
+        .title {
+            font-size: 2rem;
         }
-        @media (max-width: 425px) {
-            .card {
-                margin: 5% 0%;
-                height: 600px;
-
-            }
-            .tech a{
-                width: 20%;
-                margin-top: 3%;
-                font-size: 0.7rem;
-            }
-            .tech{
-                width: 100%;
-                margin: 0% auto;
-            }
-
+        .proj-title {
+            font-size: 3rem;
         }
-
+        .tech-heading, .task-heading{
+            font-size: 2rem;
+        }
+        .tech-item, .task-item, .proj-desc, .redirection-link{
+            font-size: 2em;
+        }
+    } */
            
 </style>

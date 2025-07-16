@@ -88,7 +88,7 @@ export default {
     }
 
     .skill-title{
-        color: #cc1313;
+        color: #F9004D;
         font-weight: 800;
         font-size: 1rem;
     }
