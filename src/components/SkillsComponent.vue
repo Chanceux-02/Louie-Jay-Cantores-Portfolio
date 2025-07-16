@@ -52,6 +52,7 @@ export default {
 
     .skills-container-main{
         padding: 40px 0;
+        background-color: #202020;
     }
 
     .skills-container{
