@@ -2,13 +2,13 @@ const skills = [
     {
         id: 1,
         skill: 'Shopify',
-        image: require('@/assets/skillsImage/shopify-logo.png'),
+        image: require('@/assets/skillsImage/shopify.png'),
         description: 'Building and customizing e-commerce stores using Shopify.'
     },
     {
         id: 2,
         skill: 'Shopify admin',
-        image: require('@/assets/skillsImage/shopify-admin.png'),
+        image: require('@/assets/skillsImage/shopify-admin.avif'),
         description: 'Managing products, orders, and settings in the Shopify admin panel.'
     },
     {
@@ -20,13 +20,13 @@ const skills = [
     {
         id: 4,
         skill: 'HTML',
-        image: require('@/assets/skillsImage/html-5.png'),
+        image: require('@/assets/skillsImage/html.webp'),
         description: 'Structuring web pages with semantic and accessible HTML5 markup.'
     },
     {
         id: 5,
         skill: 'CSS',
-        image: require('@/assets/skillsImage/css-3.png'),
+        image: require('@/assets/skillsImage/css.png'),
         description: 'Styling websites with modern CSS techniques and responsive design.'
     },
     {
@@ -38,7 +38,7 @@ const skills = [
     {
         id: 7,
         skill: 'jQuery',
-        image: require('@/assets/skillsImage/jquery.svg'),
+        image: require('@/assets/skillsImage/jquery-logo.png'),
         description: 'Simplifying DOM manipulation and AJAX with the jQuery library.'
     },
     {
@@ -50,70 +50,15 @@ const skills = [
     {
         id: 9,
         skill: 'App Integration',
-        image: require('@/assets/skillsImage/git.svg'),
+        image: require('@/assets/skillsImage/app-integration.png'),
         description: 'Integrating third-party apps and services to extend store functionality.'
     },
     {
         id: 10,
         skill: 'App Management',
-        image: require('@/assets/skillsImage/git.svg'),
+        image: require('@/assets/skillsImage/app-management.png'),
         description: 'Configuring and maintaining apps to optimize store operations.'
     }
 ];
 
-const techStack = [
-
-    {
-        id: 1,
-        skill: 'Node.js',
-        image: require('@/assets/skillsImage/node.png'),
-    },
-    {
-        id: 2,
-        skill: 'Express.js',
-        image: require('@/assets/skillsImage/express.png'),
-    },
-    {
-        id: 2.5,
-        skill: 'Vue.js',
-        image: require('@/assets/skillsImage/vuejs-icon.svg'),
-    },
-    {
-        id: 3,
-        skill: 'mongoDB',
-        image: require('@/assets/skillsImage/mongodb.svg'),
-    },
-    {
-        id: 4,
-        skill: 'Tailwind',
-        image: require('@/assets/skillsImage/tailwind.svg'),
-    },
-    {
-        id: 5,
-        skill: 'Postman',
-        image: require('@/assets/skillsImage/postman.svg'),
-    },
-    {
-        id: 6,
-        skill: 'Photoshop',
-        image: require('@/assets/skillsImage/photoshop.svg'),
-    },
-    {
-        id: 7,
-        skill: 'Github',
-        image: require('@/assets/skillsImage/github.svg'),
-    },
-    {
-        id: 8,
-        skill: 'Xampp',
-        image: require('@/assets/skillsImage/xampp.svg'),
-    },
-    {
-        id: 9,
-        skill: 'Arduino',
-        image: require('@/assets/skillsImage/arduino.svg'),
-    },
-
-]
-
-export { skills, techStack };
+export { skills };

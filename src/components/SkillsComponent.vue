@@ -84,6 +84,7 @@ export default {
         height: 50px;
         object-fit: cover;
         object-position: center;
+        border-radius: 10px;
     }
 
     .skill-title{
