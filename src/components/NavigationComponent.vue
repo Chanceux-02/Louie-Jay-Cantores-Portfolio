@@ -48,7 +48,7 @@ export default {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 100) {
-        scrollNav.value.backgroundColor = '#191919';
+        scrollNav.value.backgroundColor = 'rgb(25, 25, 25, 0.9)';
       } else {
         scrollNav.value.backgroundColor = '';
       }
@@ -119,10 +119,10 @@ export default {
 
     // **logo typing animation
 
-    const text = "My Portfolio";
+    const text = "Welcome to";
     const typedText = ref("");
     let currentIndex = -1;
-    const typingSpeed = 100; 
+    const typingSpeed = 150; 
     const backspaceSpeed = 100;
 
     const type = () => {
@@ -139,17 +139,17 @@ export default {
       if (currentIndex >= 0) {
         typedText.value = typedText.value.slice(0, -1);
         currentIndex--;
-        if(currentIndex == -1){
-          typedText.value = "\u{1F44B} \u{1F60A}";
+         if(currentIndex == -1){
+          typedText.value = "My Portfolio";
         }
         setTimeout(backspace, backspaceSpeed);
       } else {
 
-        setTimeout(() => {
-          typedText.value = ""; 
-          currentIndex = 0; 
-          setTimeout(type, 500); 
-        }, 500); 
+        // setTimeout(() => {
+        //   typedText.value = ""; 
+        //   currentIndex = 0; 
+        //   setTimeout(type, 500); 
+        // }, 1000); 
      
       }
     };
@@ -313,13 +313,13 @@ export default {
     min-width: 15%;
     min-height: 10%;
     margin: 1% 9%;
-    height: 100%;
   }
 
   .type-textouter{
     min-width: 100px;
-    margin: 1% 9%;
-    height: 100%;
+    min-height: 25px;
+    margin: 1% 8%;
+    padding: 5%;
   }
 
   .close{
@@ -398,25 +398,42 @@ export default {
       display: none;
     }
 
-    .def-home-link-2{
+    .nav-items .def-home-link-2{
       text-decoration: none;
       width: 30%;
-      height: 40%;
-      padding: 2% 5%;
+      height: 45%;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0;
     }
 
     .type-text{
-      margin: 0 9%;
+        margin: auto;
+        margin-left: 9%;
+        margin-right: 9%;
+        width: 100%;
+        min-height: 34px;
+        min-width: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
   }
 
   @media (min-width: 1900px) {
-    .type-text, .anch{
-      font-size: 2rem;
+    .nav-container {
+      max-height: 102px;
+    }
+    .nav-items .def-home-link-2{
+      height: 50%;
+    }
+    .type-text{
+      font-size: 1.5rem;
+    }
+    .anch{
+      font-size: 1.5rem;
     }
 
     .nav-items {
@@ -429,7 +446,7 @@ export default {
     }
 
     .fa-brands{
-      font-size: 5rem;
+      font-size: 3rem;
     }
   }
   
