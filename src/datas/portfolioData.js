@@ -35,7 +35,7 @@ const projects = [
         id: 1,
         image: require('@/assets/projectImage/hashtash.png'),
         title: 'Hashtash',
-        desc: 'HashStash offers the OG Stash Box, a secure small-batch bamboo storage solution featuring airtight glass jars, a sliding rolling tray, cleaning tools, and a combo lock—designed for discreet, organized carrying of herbs and accessories. They also sell a high-quality aluminum grinder with a pollen catcher—both items come with a 420-day warranty, fast shipping, and a 30-day returns policy',
+        desc: 'HashStash offers the OG Stash Box, a secure small-batch bamboo storage solution featuring airtight glass jars, a sliding rolling tray, cleaning tools, and a combo lock—designed for discreet, organized carrying of herbs and accessories. They also sell a high-quality aluminum grinder with a pollen catcher.',
         tech: ['Shopify', 'Liquid', 'Javascript','HTML', 'CSS'],
         tasks: [
             'Develop Homepage',
@@ -48,7 +48,7 @@ const projects = [
         id: 1,
         image: require('@/assets/projectImage/loveskin.png'),
         title: 'LOVESKIN',
-        desc: 'LoveSkin is a New Zealand‑based skincare brand offering a simple, science-backed 3‑step ritual—including oil cleanser, rose toning mist, and active oil serum—made from 100% natural, cruelty‑free ingredients designed to repair the skin barrier and boost hydration and glow. With over 1,200 five‑star reviews, fast NZ shipping on orders over $75, and a 60‑day money‑back guarantee, they focus on effective, botanical solutions for dry, sensitive, and acne-prone skin.',
+        desc: 'LoveSkin is a New Zealand‑based skincare brand offering a simple, science backed 3‑step ritual—including oil cleanser, rose toning mist, and active oil serum made from 100% natural, cruelty‑free ingredients designed to repair the skin barrier and boost hydration and glow. They focus on effective, botanical solutions for dry, sensitive, and acne-prone skin.',
         tech: ['Shopify', 'Liquid', 'Javascript','HTML', 'CSS'],
         tasks: [
             'Develop Homepage',
