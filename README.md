@@ -15,6 +15,11 @@ npm run serve
 npm run build
 ```
 
+### Publish the dist/ folder to a gh-pages branch, which GitHub Pages will serve.
+```
+npm run deploy
+```
+
 ### Lints and fixes files
 ```
 npm run lint
