@@ -3,12 +3,12 @@
 <div class="nav-main">
   <nav ref="navContainerInlineStyle" class="nav-container" :style="scrollNav">
     <a href="#home" @click.prevent="scrollTo('#home')" class="def-home-link">
-      <p v-if="windowWidth <= 1024" v-show="!navElementVisibility" class="type-textouter"> {{ typedText }} </p>
+      <p v-if="windowWidth <= 1023" v-show="!navElementVisibility" class="type-textouter"> {{ typedText }} </p>
     </a>
     <ul ref="navItemsILineStyle" v-show="navElementVisibility" class="nav-items">
-        <p v-if="windowWidth <= 1024"  @click="burger(0)" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
+        <p v-if="windowWidth <= 1023"  @click="burger(0)" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
         <a href="#home" @click.prevent="scrollTo('#home')" class="def-home-link-2">
-          <p  v-if="windowWidth > 1024" class="type-text"> {{ typedText }} </p>
+          <p  v-if="windowWidth > 1023" class="type-text"> {{ typedText }} </p>
         </a>
         <li :class="{ 'active': activeTab === 'home' }" class="anch"><a href="#home" @click.prevent="scrollTo('#home')">Home</a></li>
         <li :class="{ 'active': activeTab === 'about' }" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
@@ -64,7 +64,7 @@ export default {
     const updateWindowWidth = () => {
       windowWidth.value = window.innerWidth;
 
-        if (windowWidth.value > 1024) {
+        if (windowWidth.value > 1023) {
           navItemsILineStyle.value.style.height = '';
           navContainerInlineStyle.value.style.padding = '';
 
@@ -156,7 +156,7 @@ export default {
    
     const burger = (type) => {
 
-      if (windowWidth.value <= 1024) {
+      if (windowWidth.value <= 1023) {
         navElementVisibility.value = !navElementVisibility.value;
         if(type == 1){
           navItemsILineStyle.value.style.height = '500px';
@@ -180,7 +180,7 @@ export default {
         navItemsILineStyle.value.style.height = '';
         navContainerInlineStyle.value.style.padding = '';
 
-        if (windowWidth.value < 1024) {
+        if (windowWidth.value < 1023) {
           navElementVisibility.value = false;
         }
       }
