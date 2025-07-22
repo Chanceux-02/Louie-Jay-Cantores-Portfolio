@@ -3,12 +3,12 @@
 <div class="nav-main">
   <nav ref="navContainerInlineStyle" class="nav-container" :style="scrollNav">
     <a href="#home" @click.prevent="scrollTo('#home')" class="def-home-link">
-      <p v-if="windowWidth <= 925" v-show="!navElementVisibility" class="type-textouter"> {{ typedText }} </p>
+      <p v-if="windowWidth <= 1024" v-show="!navElementVisibility" class="type-textouter"> {{ typedText }} </p>
     </a>
     <ul ref="navItemsILineStyle" v-show="navElementVisibility" class="nav-items">
-        <p v-if="windowWidth <= 925"  @click="burger(0)" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
+        <p v-if="windowWidth <= 1024"  @click="burger(0)" class="close"><i class="fa-solid fa-3x fa-circle-xmark"></i></p>
         <a href="#home" @click.prevent="scrollTo('#home')" class="def-home-link-2">
-          <p  v-if="windowWidth > 925" class="type-text"> {{ typedText }} </p>
+          <p  v-if="windowWidth > 1024" class="type-text"> {{ typedText }} </p>
         </a>
         <li :class="{ 'active': activeTab === 'home' }" class="anch"><a href="#home" @click.prevent="scrollTo('#home')">Home</a></li>
         <li :class="{ 'active': activeTab === 'about' }" class="anch"><a href="#about"  @click.prevent="scrollTo('#about')">About</a></li>
