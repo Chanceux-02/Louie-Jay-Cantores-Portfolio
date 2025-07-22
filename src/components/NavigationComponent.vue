@@ -156,7 +156,7 @@ export default {
    
     const burger = (type) => {
 
-      if (windowWidth.value <= 925) {
+      if (windowWidth.value <= 1024) {
         navElementVisibility.value = !navElementVisibility.value;
         if(type == 1){
           navItemsILineStyle.value.style.height = '500px';
@@ -180,7 +180,7 @@ export default {
         navItemsILineStyle.value.style.height = '';
         navContainerInlineStyle.value.style.padding = '';
 
-        if (windowWidth.value < 925) {
+        if (windowWidth.value < 1024) {
           navElementVisibility.value = false;
         }
       }
