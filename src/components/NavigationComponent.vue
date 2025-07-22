@@ -64,7 +64,7 @@ export default {
     const updateWindowWidth = () => {
       windowWidth.value = window.innerWidth;
 
-        if (windowWidth.value > 925) {
+        if (windowWidth.value > 1024) {
           navItemsILineStyle.value.style.height = '';
           navContainerInlineStyle.value.style.padding = '';
 
